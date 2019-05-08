@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('animations.css');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.welcome {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-gap: 5px;
+    align-content: center;
+    justify-items: center;
+
+    text-align: center;
+}
+.welcome span:first-child {
+    font-size: 25px;
+}
+.welcome span:last-child {
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+.welcome span {
+    position: relative;
+    padding: 0 5px;
+}
+.welcome span::before {
+    position: absolute;
+    content: "";
+
+    width: 100%;
+    height: 100%;
+
+    bottom: 0;
+    right: 0;
+
+    display: block;
+
+    background-color: #ffffff;
+    z-index: 1;
+}
+.welcome span:first-child::before { animation: blockHideDown .6s forwards ease-out; }
+.welcome span:last-child::before { animation: blockHideDown .6s .4s forwards ease-out; }
+
+@media screen and (min-width: 768px) {
+    .welcome span:first-child { font-size: 40px; }
+    .welcome span:last-child { font-size: 30px; }
+}
+@media screen and (min-width: 1024px) {
+    .welcome span:first-child { font-size: 50px; }
+    .welcome span:last-child { font-size: 40px; }
+}
+@media screen and (min-width: 1366px) {
+
+}
+@media screen and (min-width: 1920px) {
+
+}

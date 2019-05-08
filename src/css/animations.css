@@ -1,0 +1,5 @@
+@keyframes blockHideDown {
+    100% {
+        height: 0%;
+    }
+}

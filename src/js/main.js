@@ -24,7 +24,7 @@ function showSection(index) {
 
     }
 }
-document.querySelectorAll('.tech_list_item').forEach((v,i) => {
+document.querySelectorAll('.tech_list_item, .iUse_list_item').forEach((v,i) => {
     let hidden = true
 
     v.addEventListener('click', () => {

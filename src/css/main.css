@@ -109,8 +109,8 @@ section > .title {
     transition: opacity .15s ease-out;
 }
 
-/* tech */
-.tech {
+/* tech programs (list) */
+.tech, .iUse {
     width: 100%;
     display: grid;
     padding: 0 20px;
@@ -120,17 +120,17 @@ section > .title {
 .tech .title {
     transition: transform .25s;
 }
-.tech[class~=hidden] .title {
+.tech[class~=hidden] .title { /* Hidden tech title */
     transform: translateY(-100%);
 }
-.tech_list {
+.tech_list, .iUse_list {
     display: grid;
     grid-template-columns: repeat(auto-fit, 75px);
     grid-gap: 5px;
     justify-items: center;
     justify-content: center;
 }
-.tech_list_item {
+.tech_list_item, .iUse_list_item {
     position: relative;
 
     width: 75px;
@@ -144,14 +144,21 @@ section > .title {
     overflow: hidden;
     transition: opacity .25s;
 }
-.tech_list_item[class~=hidden] {
-    opacity: 0;
+.tech_list_item[class~=hidden] { /* hidden tech_list_item */
+    opacity: 0 ;
 }
-.tech_list_item i {
+.tech_list_item i { /* tech icon */
     font-size: 2em;
     z-index: -1;
 }
-.tech_list_item span {
+.iUse_list_item {
+    padding: 25%; 
+}
+.iUse_list_item img { /* image as icon */
+    width: 100%;
+    z-index: -1;
+}
+.tech_list_item span, .iUse_list_item span {
     position: absolute;
 
     display: grid;
@@ -169,7 +176,7 @@ section > .title {
     transition: opacity .25s;
     z-index: -1;
 }
-.tech_list_item span[class~=hidden] {
+.tech_list_item span[class~=hidden], .iUse_list_item span[class~=hidden] {
     opacity: 0;
 }
 

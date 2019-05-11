@@ -24,6 +24,8 @@ function showSection(index) {
 
     }
 }
+
+// wyświetla / ukrywa nazwę technologi/programu po kliknięciu
 document.querySelectorAll('.tech_list_item, .iUse_list_item').forEach((v,i) => {
     let hidden = true
 
@@ -37,4 +39,20 @@ document.querySelectorAll('.tech_list_item, .iUse_list_item').forEach((v,i) => {
             v.children[1].classList.add('hidden')
         }
     })
+})
+
+//Project nav
+const projectsList = document.querySelector('.projects_list')
+const projectsNav = document.querySelectorAll('.projects_nav_list_item')
+
+
+projectsNav.forEach((v,i) => {
+    v.addEventListener('click', () => {
+        projectsNav.forEach(v => v.classList.remove('active'))
+        projectsNav[i].classList.add('active')
+
+        projectsList.style.transform = `translateX(-${100 * i}%)`
+    })
+
+
 })

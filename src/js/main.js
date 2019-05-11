@@ -44,7 +44,8 @@ document.querySelectorAll('.tech_list_item, .iUse_list_item').forEach((v,i) => {
 //Project nav
 const projectsList = document.querySelector('.projects_list')
 const projectsNav = document.querySelectorAll('.projects_nav_list_item')
-
+const projectsImageSlider = document.querySelectorAll('.project_images_slider')
+const projectImageNavs = document.querySelectorAll('.project_images_nav')
 
 projectsNav.forEach((v,i) => {
     v.addEventListener('click', () => {
@@ -53,6 +54,17 @@ projectsNav.forEach((v,i) => {
 
         projectsList.style.transform = `translateX(-${100 * i}%)`
     })
+})
 
-
+projectImageNavs.forEach((nav,navIndex) => {
+    let items = Array.from(nav.children)
+    
+    items.forEach((item, itemIndex) => {
+        item.addEventListener('click', () => {
+            items.forEach(v => v.classList.remove('active'))
+            item.classList.add('active')
+            
+            projectsImageSlider[navIndex].style.transform = `translateX(-${itemIndex * 100}%)`
+        })
+    })
 })

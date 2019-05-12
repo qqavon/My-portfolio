@@ -44,7 +44,7 @@ document.querySelectorAll('.tech_list_item, .iUse_list_item').forEach((v,i) => {
 //Project nav
 const projectsList = document.querySelector('.projects_list')
 const projectsNav = document.querySelectorAll('.projects_nav_list_item')
-const projectsImageSlider = document.querySelectorAll('.project_images_slider')
+const projectsImageswiper = document.querySelectorAll('.project_images_swiper')
 const projectImageNavs = document.querySelectorAll('.project_images_nav')
 
 projectsNav.forEach((v,i) => {
@@ -56,15 +56,62 @@ projectsNav.forEach((v,i) => {
     })
 })
 
+const swipeInfo = document.querySelector('.swipeInfo')
 projectImageNavs.forEach((nav,navIndex) => {
-    let items = Array.from(nav.children)
+    let selectedImageIndex = 0
+    let items = Array.from(nav.children) //images in <li>
+    const parent = nav.parentElement //project images element
+
+    let x1 = 0
+    let x2 = 0
+    let d = 0
     
+    
+    function setActiveNav(index) {
+        items.forEach(v => v.classList.remove('active'))
+        items.filter((v,i) => i == index)[0].classList.add('active')
+    }
+    
+    function setImage(index) {
+        if(index >= 0 && index < items.length) {
+            selectedImageIndex = index
+            projectsImageswiper[navIndex].style.transform = `translateX(-${index * 100}%)`
+            
+            setActiveNav(index)
+        }
+    }
+    
+    function swipeImage(x1, x2, imgsQuantity, selectedImageIndex) {
+        let minDistance = 40
+        let d = (x1 - x2)
+        
+        swipeInfo.innerHTML = `x1: ${x1}, x2: ${x2}, d: ${d}`
+        if(d > 0 && Math.abs(d) > minDistance)      setImage(selectedImageIndex+1)
+        else if(d < 0 && Math.abs(d) > minDistance) setImage(selectedImageIndex-1)
+    }
+    
+    //swipe image
+    parent.addEventListener('mousedown', e => { x1 = e.x })
+    parent.addEventListener('mouseup', e => {
+        x2 = e.x
+
+        swipeImage(x1, x2, items.length, selectedImageIndex)
+    })
+
+    parent.addEventListener('touchstart', e => { x1 = e.changedTouches[0].clientX })
+    parent.addEventListener('touchend', e => {
+        x2 = e.changedTouches[0].clientX
+
+        swipeImage(x1, x2, items.length, selectedImageIndex)
+    })
+    
+    
+    //Added click event to buttons in image nav
     items.forEach((item, itemIndex) => {
         item.addEventListener('click', () => {
-            items.forEach(v => v.classList.remove('active'))
-            item.classList.add('active')
-            
-            projectsImageSlider[navIndex].style.transform = `translateX(-${itemIndex * 100}%)`
+            setActiveNav(itemIndex)
+            setImage(itemIndex)
         })
     })
+
 })

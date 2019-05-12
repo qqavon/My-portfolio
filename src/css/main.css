@@ -6,6 +6,20 @@
     box-sizing: border-box;
 }
 
+.swipeInfo {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+
+    background-color: #000000;
+    color: #ffffff;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -213,8 +227,8 @@ section > .title {
 .projects_nav_list_item[class~=active] {
     background-color: #ffffff;
 }
-/* project slider */
-.projects_slider {
+/* project swiper */
+.projects_swiper {
     overflow: hidden;
 }
 /* projects list */
@@ -260,12 +274,12 @@ section > .title {
     position: relative;
     display: grid;
 }
-.project_images_slider {
+.project_images_swiper {
     display: flex;
 
     transition: transform .35s ease-out;
 }
-.project_images_slider_item {
+.project_images_swiper_item {
     min-width: 100%;
 }
 /* project images nav */

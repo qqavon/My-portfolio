@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
-@import url('animations.css');
 
 * {
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }
 
-.swipeInfo {
+.loading {
     position: fixed;
-
-    top: 0;
-    left: 0;
-    
     display: grid;
-    width: 100vw;
-    max-width: 100%;
+    justify-items: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
 
     background-color: #000000;
-    color: #ffffff;
+    transition: all 1s;
+    z-index: 5;
 }
 
 body {
@@ -34,6 +33,7 @@ main {
 
     display: grid;
     justify-items: center;
+    grid-gap: 50vh;
 }
 
 ul {
@@ -91,7 +91,7 @@ section > .title {
     background-color: #ffffff;
     z-index: 1;
 
-    transition: height .25s;
+    transition: height .5s;
 }
 .welcome span[class~=hidden]::before {
     height: 100%;
@@ -106,7 +106,7 @@ section > .title {
     justify-items: center;
 
     overflow: hidden;
-    transition: all .25s;
+    transition: all .5s;
 }
 
 .aboutMe .description {
@@ -116,7 +116,7 @@ section > .title {
     font-weight: 300;
 }
 .aboutMe span {
-    transition: transform .5s, opacity .25s;
+    transition: transform .75s, opacity .5s;
 }
 .aboutMe[class~=hidden] span{
     transform: translateY(100%);
@@ -124,7 +124,7 @@ section > .title {
 }
 .aboutMe .description span[class~=hidden] {
     opacity: 0;
-    transition: opacity .15s ease-out;
+    transition: opacity .5s ease-out;
 }
 
 /* tech programs (list) */
@@ -135,10 +135,10 @@ section > .title {
 
     overflow: hidden;
 }
-.tech .title {
-    transition: transform .25s;
+.tech .title, .iUse .title {
+    transition: transform .5s;
 }
-.tech[class~=hidden] .title { /* Hidden tech title */
+.tech[class~=hidden] .title, .iUse[class~=hidden] .title { /* Hidden tech title */
     transform: translateY(-100%);
 }
 .tech_list, .iUse_list {
@@ -160,9 +160,9 @@ section > .title {
     border: solid 1px;
 
     overflow: hidden;
-    transition: opacity .25s;
+    transition: opacity .75s;
 }
-.tech_list_item[class~=hidden] { /* hidden tech_list_item */
+.tech_list_item[class~=hidden], .iUse_list_item[class~=hidden] { /* hidden tech_list_item */
     opacity: 0 ;
 }
 .tech_list_item i { /* tech icon */
@@ -190,7 +190,7 @@ section > .title {
 
     text-align: center;
     background-color: rgba(0, 0, 0, 0.75);
-    transition: opacity .25s;
+    transition: opacity .5s;
     z-index: -1;
 }
 .tech_list_item span[class~=hidden], .iUse_list_item span[class~=hidden] {
@@ -205,6 +205,15 @@ section > .title {
     max-width: 728px;
 
     padding: 0 20px;
+    transition: opacity .8s, transform .8s;
+}
+.projects[class~=hidden]{
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.projects .title {
+    margin-bottom: 15px;
 }
 
 /* projects_nav_list */
@@ -222,7 +231,7 @@ section > .title {
     height: 25px;
     border: solid 1px;
 
-    transition: background-color .25s;
+    transition: background-color .5s;
 }
 .projects_nav_list_item[class~=active] {
     background-color: #ffffff;
@@ -236,7 +245,7 @@ section > .title {
     display: flex;
     width: 100%;
 
-    transition: transform .25s ease;
+    transition: transform .5s ease;
 }
 .projects_list_item {
     display: grid;
@@ -277,7 +286,7 @@ section > .title {
 .project_images_swiper {
     display: flex;
 
-    transition: transform .35s ease-out;
+    transition: transform .5s ease-out;
 }
 .project_images_swiper_item {
     min-width: 100%;
@@ -350,9 +359,25 @@ section > .title {
     display: grid;
 }
 .contact_item {
-    margin: 75px 0 100px 0;
+    position: relative;
+
+    margin: 25px 0 45vh 0;
     font-weight: 300;
     font-size: 1.15em;
+}
+.contact_item::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    height: 0%;
+    width: 100%;
+    background-color: #ffffff;
+    transition: height .7s;
+}
+.contact_item[class~=hidden]::before {
+    height: 100%;
 }
 
 /* media */

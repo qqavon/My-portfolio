@@ -21,7 +21,20 @@ function showSection(index) {
                 }, 75 * i)
             })
             break
-
+        case 3:
+            sections[3].classList.remove('hidden')
+            document.querySelectorAll('.iUse_list_item').forEach((v,i) => {
+                setTimeout(() => {
+                    v.classList.remove('hidden')
+                }, 75 * i)
+            })
+            break
+        case 4:
+            sections[4].classList.remove('hidden')
+            break
+        case 5:
+            document.querySelector('.contact_item').classList.remove('hidden')
+            break
     }
 }
 
@@ -112,4 +125,22 @@ projectImageNavs.forEach((nav,navIndex) => {
         })
     })
 
+})
+
+//scroll
+window.addEventListener('scroll', () => {
+    sections.forEach((section, index) => {
+        if((window.pageYOffset + window.innerHeight/1.45) > section.offsetTop) {
+            showSection(index)
+        }
+    })
+})
+
+const loadingElement = document.querySelector('.loading')
+document.fonts.ready.then(() => {
+    loadingElement.style.zIndex = -5
+    loadingElement.style.opacity = 0
+    loadingElement.innerHTML = '';
+
+    window.scrollTo(0,1)
 })

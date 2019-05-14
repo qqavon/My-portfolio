@@ -346,6 +346,15 @@ section > .title {
     color: #ffffff;
 }
 
+.contact {
+    display: grid;
+}
+.contact_item {
+    margin: 75px 0 100px 0;
+    font-weight: 300;
+    font-size: 1.15em;
+}
+
 /* media */
 @media screen and (min-width: 768px) {
     section > .title { font-size: 35px }
@@ -354,9 +363,12 @@ section > .title {
     .welcome span:last-child { font-size: 30px }
 
     .aboutMe .description { font-size: 25px }
+
+    .contact_item {
+        font-size: 1.45em;
+    }
 }
 @media screen and (min-width: 1024px) {
-    
 }
 @media screen and (min-width: 1366px) {
 

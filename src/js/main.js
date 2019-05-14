@@ -56,7 +56,6 @@ projectsNav.forEach((v,i) => {
     })
 })
 
-const swipeInfo = document.querySelector('.swipeInfo')
 projectImageNavs.forEach((nav,navIndex) => {
     let selectedImageIndex = 0
     let items = Array.from(nav.children) //images in <li>
@@ -81,11 +80,10 @@ projectImageNavs.forEach((nav,navIndex) => {
         }
     }
     
-    function swipeImage(x1, x2, imgsQuantity, selectedImageIndex) {
+    function swipeImage(x1, x2, selectedImageIndex) {
         let minDistance = 40
         let d = (x1 - x2)
         
-        swipeInfo.innerHTML = `x1: ${x1}, x2: ${x2}, d: ${d}`
         if(d > 0 && Math.abs(d) > minDistance)      setImage(selectedImageIndex+1)
         else if(d < 0 && Math.abs(d) > minDistance) setImage(selectedImageIndex-1)
     }
@@ -95,14 +93,14 @@ projectImageNavs.forEach((nav,navIndex) => {
     parent.addEventListener('mouseup', e => {
         x2 = e.x
 
-        swipeImage(x1, x2, items.length, selectedImageIndex)
+        swipeImage(x1, x2, selectedImageIndex)
     })
 
     parent.addEventListener('touchstart', e => { x1 = e.changedTouches[0].clientX })
     parent.addEventListener('touchend', e => {
         x2 = e.changedTouches[0].clientX
 
-        swipeImage(x1, x2, items.length, selectedImageIndex)
+        swipeImage(x1, x2, selectedImageIndex)
     })
     
     

@@ -127,11 +127,38 @@ projectImageNavs.forEach((nav,navIndex) => {
 
 })
 
+function setSectionNameInNav(index) {
+    const sectionNameNav = document.querySelector('.nav_sectionName')
+    switch(index) {
+        case 0:
+            sectionNameNav.innerHTML = 'Początek'
+            break
+        case 1:
+            sectionNameNav.innerHTML = 'O mnie'
+            break
+        case 2:
+            sectionNameNav.innerHTML = 'Technologie'
+            break
+        case 3:
+            sectionNameNav.innerHTML = 'Korzystam z'
+            break
+        case 4:
+            sectionNameNav.innerHTML = 'Projekty'
+            break
+        case 5:
+            sectionNameNav.innerHTML = 'Kontakt'
+            break
+    }
+}
 //scroll
 window.addEventListener('scroll', () => {
+    console.log('scroll', window.pageYOffset)
     sections.forEach((section, index) => {
         if((window.pageYOffset + window.innerHeight/1.45) > section.offsetTop) {
             showSection(index)
+            setActiveSectionNavItem(index)
+            setSectionNameInNav(index)
+            
         }
     })
 })
@@ -144,3 +171,42 @@ document.fonts.ready.then(() => {
 
     window.scrollTo(0,1)
 })
+
+
+//mobile menu
+const mobileMenu = document.querySelector('.mobileMenu')
+document.querySelector('.nav_mobileButton').addEventListener('click', () => {
+    mobileMenu.classList.toggle('active')
+})
+
+const navListItems = document.querySelectorAll('.nav_list_item')
+const mobileMenuListItems = document.querySelectorAll('.mobileMenu_list_item')
+
+mobileMenuListItems.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.remove('active')
+        scrollToSection(i)
+    })
+})
+navListItems.forEach((item, i) => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.remove('active')
+        scrollToSection(i)
+    })
+})
+
+//section navigation
+function scrollToSection(index) {
+    window.scrollTo(0, sections[index].offsetTop - window.innerHeight/2 + sections[index].clientHeight/2)
+    setActiveSectionNavItem(index)
+}
+
+const mobileMenuListItemsCube = document.querySelectorAll('.mobileMenu_list_item_cube')
+
+function setActiveSectionNavItem(index) {
+    mobileMenuListItemsCube.forEach(cube => { cube.classList.remove('active') })
+    navListItems.forEach(item => { item.classList.remove('active') })
+
+    mobileMenuListItemsCube[index].classList.add('active')
+    navListItems[index].classList.add('active')
+}

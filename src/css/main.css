@@ -27,6 +27,112 @@ body {
     color: #ffffff;
 }
 
+nav {
+    justify-self: center;
+    position: fixed;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px;
+
+    background-color: #000000;
+
+    z-index: 10;
+}
+.nav_list {
+
+    justify-self: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18px);
+    grid-gap: 5px;
+    
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.nav_list_item {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: solid 1px;
+    overflow: hidden;
+}
+.nav_list_item::after {
+    content: "";
+    display: block;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform .25s;
+}
+.nav_list_item[class~=active]::after {
+    transform: translateY(0%);
+}
+.nav_sectionName {
+    font-size: 1.1em;
+    grid-column: 1 / -1;
+    display: none;
+    justify-self: start;
+    font-weight: 300;
+}
+.nav_mobileButton {
+    justify-content: end;
+    display: grid;
+    grid-gap: 8px;
+}
+.nav_mobileButton_line {
+    width: 30px;
+    height: 1px;
+    background-color: #ffffff;
+}
+.mobileMenu {
+    position: fixed;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #000;
+    transform: translateY(-100%);
+    z-index: 5;
+
+    transition: transform .5s ease-in-out;
+}
+.mobileMenu[class~=active] {
+    transform: translateY(0%);
+}
+.mobileMenu_list {
+    display: grid;
+    grid-gap: 25px;
+}
+.mobileMenu_list_item {
+    display: grid;
+    grid-template-columns: 1fr 18px;
+    grid-gap: 50px;
+    align-items: center;
+}
+.mobileMenu_list_item_cube {
+    width: 18px;
+    height: 18px;
+    border: solid 1px;
+}
+.mobileMenu_list_item_cube[class~=active] {
+    background-color: #ffffff;
+}
+.mobileMenu_list_item_sectionName {
+    font-weight: 300;
+    font-size: 1.5em;
+    transform: translateY(-2px);
+}
+
 main {
     width: 100vw;
     max-width: 100%;
@@ -389,14 +495,19 @@ section > .title {
 
     .aboutMe .description { font-size: 25px }
 
-    .contact_item {
-        font-size: 1.45em;
-    }
+    .contact_item { font-size: 1.45em; }
+
+    .mobileMenu { display: none }
+    .nav_mobileButton { display: none }
+    .nav_sectionName { display: grid; }
+    
+    .nav_list { grid-template-columns: repeat(auto-fit, 25px); }
+    .nav_list_item { width: 25px; height: 25px; }
 }
 @media screen and (min-width: 1024px) {
 }
 @media screen and (min-width: 1366px) {
-
+    
 }
 @media screen and (min-width: 1920px) {
 

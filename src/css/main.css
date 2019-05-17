@@ -39,6 +39,8 @@ nav {
     left: 0;
     padding: 15px;
 
+    background-color: #000000;
+
     z-index: 10;
 }
 .nav_list {
@@ -393,6 +395,10 @@ section > .title {
     display: flex;
 
     transition: transform .5s ease-out;
+    cursor: grab;
+}
+.project_images_swiper:active {
+    cursor: grabbing;
 }
 .project_images_swiper_item {
     min-width: 100%;
@@ -497,7 +503,6 @@ section > .title {
 
     .contact_item { font-size: 1.45em; }
 
-    nav {background-color: #000000; }
     .mobileMenu { display: none }
     .nav_mobileButton { display: none }
     .nav_sectionName { display: grid; }

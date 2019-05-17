@@ -1,3 +1,4 @@
+(function () {
 const sections = document.querySelectorAll('section')
 
 function showSection(index) {
@@ -152,7 +153,6 @@ function setSectionNameInNav(index) {
 }
 //scroll
 window.addEventListener('scroll', () => {
-    console.log('scroll', window.pageYOffset)
     sections.forEach((section, index) => {
         if((window.pageYOffset + window.innerHeight/1.45) > section.offsetTop) {
             showSection(index)
@@ -210,3 +210,4 @@ function setActiveSectionNavItem(index) {
     mobileMenuListItemsCube[index].classList.add('active')
     navListItems[index].classList.add('active')
 }
+})()

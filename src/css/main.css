@@ -39,8 +39,6 @@ nav {
     left: 0;
     padding: 15px;
 
-    background-color: #000000;
-
     z-index: 10;
 }
 .nav_list {
@@ -154,6 +152,7 @@ img {
 
 section > .title {
     font-size: 25px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -329,6 +328,7 @@ section > .title {
     grid-gap: 10px;
     justify-items: center;
     justify-content: center;
+    padding: 2px;
 
     margin-bottom: 15px;
 }
@@ -497,6 +497,7 @@ section > .title {
 
     .contact_item { font-size: 1.45em; }
 
+    nav {background-color: #000000; }
     .mobileMenu { display: none }
     .nav_mobileButton { display: none }
     .nav_sectionName { display: grid; }

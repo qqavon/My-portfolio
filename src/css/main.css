@@ -417,12 +417,12 @@ section > .title {
 .project_images_nav_item {
     width: 15px;
     height: 15px;
-    border: solid black 1px;
+    border: solid rgb(63, 63, 63) 1px;
     background-color: transparent;
     z-index: 2;
 }
 .project_images_nav_item[class~=active] {
-    background-color: rgba(0, 0, 0, .5);
+    animation: smoothBlink 1s ease-in-out infinite alternate-reverse
 }
 /* project stack list */
 .project_stack_list {
@@ -510,11 +510,11 @@ section > .title {
     .nav_list { grid-template-columns: repeat(auto-fit, 25px); }
     .nav_list_item { width: 25px; height: 25px; }
 }
-@media screen and (min-width: 1024px) {
-}
-@media screen and (min-width: 1366px) {
-    
-}
-@media screen and (min-width: 1920px) {
-
+@keyframes smoothBlink {
+    0% {
+        background-color: rgba(0, 0, 0, 0)
+    }
+    100% {
+        background-color: rgba(202, 202, 202, 1)
+    }
 }

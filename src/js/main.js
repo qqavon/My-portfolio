@@ -163,15 +163,10 @@ window.addEventListener('scroll', () => {
     })
 })
 
-const loadingElement = document.querySelector('.loading')
-document.fonts.ready.then(() => {
-    loadingElement.style.zIndex = -5
-    loadingElement.style.opacity = 0
-    loadingElement.innerHTML = '';
 
-    window.scrollTo(0,1)
-})
-
+setTimeout(() => {
+    showSection(0)
+}, 100)
 
 //mobile menu
 const mobileMenu = document.querySelector('.mobileMenu')

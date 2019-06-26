@@ -1,0 +1,25 @@
+.hero {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    grid-template-columns: 1fr;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero__me {
+    display: grid;
+    text-align: center;
+
+    color: #E3E3E3;
+}
+.hero__me span:first-child {
+    font-size: 32px;
+    font-weight: 700;
+}
+.hero__me span:last-child {
+    font-size: 24px;
+    font-weight: 300;
+}

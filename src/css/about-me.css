@@ -3,10 +3,6 @@
     justify-items: center;
 }
 
-.about-me__me {
-    max-width: 720px;
-}
-
 .about-me__me__description {
     color: #E3E3E3;
 }

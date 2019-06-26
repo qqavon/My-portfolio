@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <meta name="theme-color" content="#5175EC">
     <link rel="stylesheet" href="./src/css/main.css">
     <link rel="stylesheet" href="./src/css/hero.css">
     <link rel="stylesheet" href="./src/css/about-me.css">
+    <link rel="stylesheet" href="./src/css/tech-and-tools.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 <body>
@@ -26,7 +28,69 @@
                     <p class="about-me__me__description"> Swoją przygodę z programowaniem rozpoczałem na początku 2017 roku. Najpierw programowałem w Javie i C#. Chciałem też zobaczyć jak programuje się strony internetowe. Zacząłem od PHP, przeszedłem do JavaScript wykorzystując go w NodeJs jak i do frontendu. W wolnym czasie uczę się nowych technologii, gram w gry i słucham muzyki. </p>
                 </div>
             </section>
+
+            <section class="tech-and-tools">
+                <div class="tech-and-tools__container">
+                    <span class="title"> Technologie </span>
+
+                    <div class="tech-and-tools__list">
+                        <div class="tech-and-tools__list__item selected" data-tech="html">
+                            <i class="devicon-html5-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="css">
+                            <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="js">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="nodejs">
+                            <i class="devicon-nodejs-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="mongodb">
+                            <i class="devicon-mongodb-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="vue">
+                            <i class="devicon-vuejs-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="sass">
+                            <i class="devicon-sass-original colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="react">
+                            <i class="devicon-react-original colored"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-and-tools__container">
+                    <span class="title"> Narzędzia </span>
+
+                    <div class="tech-and-tools__list">
+                        <div class="tech-and-tools__list__item" data-tech="vscode">
+                            <img src="./src/img/vscode.png" alt="vscode icon">
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="git">
+                            <img src="./src/img/git.png" alt="git icon">
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="gimp">
+                            <img src="./src/img/gimp.png" alt="gimp icon">
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="adobexd">
+                            <img src="./src/img/adobexd.png" alt="adobexd icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-and-tools__container--description">
+                    <div class="tech-and-tools__container__selected">
+                        <span class="tech-and-tools__container__selected__name"></span>
+                        <div class="tech-and-tools__container__selected__logo"></div>
+                        <span class="tech-and-tools__container__selected__description"></span>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+
+    <script src="./src/js/tech-and-tools.js"></script>
 </body>
 </html>

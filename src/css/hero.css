@@ -16,11 +16,20 @@
     color: #E3E3E3;
 }
 .hero__me span:first-child {
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
     margin-bottom: 12px;
 }
 .hero__me span:last-child {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+    .hero__me span:first-child {
+        font-size: 32px;
+    }
+    .hero__me span:last-child {
+        font-size: 24px;
+    }
 }

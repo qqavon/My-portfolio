@@ -23,6 +23,9 @@ main {
 .container {
     justify-self: center;
 
+    display: grid;
+    grid-gap: 80px;
+
     max-width: 1024px;
     width: 100%;
 }
@@ -40,9 +43,42 @@ main {
 
 section {
     padding: 15px;
+    border-top: solid rgb(21, 21, 31) 3px;
 }
 
 img {
     width: 100%;
     padding: 8px;
+}
+
+.button-circle {
+    width: 45px;
+    height: 45px;
+
+    outline: none;
+    background-color: transparent;
+    border-radius: 100%;
+    border: solid #E3E3E3 2px;
+}
+.button-circle--link {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    text-decoration: none;
+}
+.button-circle--link i {
+    transform: scale(.9);
+}
+
+.button-circle--close, .button-circle--close i {
+    border-color: #EC5151;
+    color: #EC5151;
+}
+.fas, .fab {
+    color: #E3E3E3;
+}
+
+.rotate--left {
+    transform: rotateZ(180deg) translateX(2px);
 }

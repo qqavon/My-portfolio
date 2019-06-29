@@ -10,10 +10,70 @@
     <link rel="stylesheet" href="./src/css/hero.css">
     <link rel="stylesheet" href="./src/css/about-me.css">
     <link rel="stylesheet" href="./src/css/tech-and-tools.css">
+    <link rel="stylesheet" href="./src/css/projects.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <script src="https://kit.fontawesome.com/3ac5df88bb.js"></script>
+    <script src="./src/js/logos.js"></script>
 </head>
 <body>
+    
     <main>
+        <div class="selected-project hidden">
+            <div class="selected-project__buttons">
+                <div class="selected-project__buttons__nav">
+                    <button class="button-circle" id="prevSelected"> <i class="fas fa-chevron-right rotate--left"></i> </button>
+                    <button class="button-circle" id="nextSelected"> <i class="fas fa-chevron-right"></i> </button>
+                </div>
+                
+                <div class="selected-project__buttons__close">
+                    <button class="button-circle button-circle--close" id="closeSelected">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <span class="selected-project__buttons__title"> Tytuł projektu </span>
+            
+            <div class="selected-project__stack">
+                <span class="title title--selected-project"> Stack </span>
+                <div class="selected-project__stack__list">
+                    <div class="selected-project__stack__list__item"></div>
+                </div>
+            </div>
+            
+            <div class="selected-project__description">
+                <span class="title title--selected-project"> Opis </span>
+                <p class="selected-project__description__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nesciunt sapiente quis soluta magni? At facilis totam recusandae nobis nihil tempore repellendus quis cupiditate nesciunt maiores, quasi impedit similique cum iure mollitia distinctio qui. Molestias quaerat, aperiam cumque, ut id, tempore fugiat magni deleniti quidem commodi ullam nihil laboriosam aliquam! </p>
+            </div>
+            
+            <div class="selected-project__features">
+                <span class="title title--selected-project"> Funkcje </span>
+                <ul class="selected-project__features__list">
+                    <li class="selected-project__features__list__item">Ficzer 1</li>
+                    <li class="selected-project__features__list__item">Ficzer 2</li>
+                    <li class="selected-project__features__list__item">Ficzer 3</li>
+                </ul>
+            </div>
+            
+            <div class="selected-project__links">
+                <div class="selected-project__links__col">
+                    <a class="button-circle button-circle--link" href="" id="selectedProjectGithubUrl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <span class="title title--selected-project">
+                        GitHub
+                    </span>
+                </div>
+    
+                <div class="selected-project__links__col">
+                    <a class="button-circle button-circle--link" href="" id="selectedProjectDemoUrl">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <span class="title title--selected-project"> Podgląd </span>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <section class="hero">
                 <div class="hero__me">
@@ -25,7 +85,20 @@
             <section class="about-me">
                 <div class="about-me__me">
                     <span class="title">O mnie</span>
-                    <p class="about-me__me__description"> Swoją przygodę z programowaniem rozpoczałem na początku 2017 roku. Najpierw programowałem w Javie i C#. Chciałem też zobaczyć jak programuje się strony internetowe. Zacząłem od PHP, przeszedłem do JavaScript wykorzystując go w NodeJs jak i do frontendu. W wolnym czasie uczę się nowych technologii, gram w gry i słucham muzyki. </p>
+                    <div class="about-me__me__description">
+                        <p>
+                            Pierwsze kroki w programowaniu zacząłem 2 lata temu w języku Java (SE) tworząc proste aplikacje okienkowe.
+                            Rok później zainteresował mnie front-end i ...
+                        </p>
+
+                        <p>
+                            Od tamtego czasu stale staram rozwijać się we front-endzie ucząć się nowych frameworków, poznając standardy i chęć tworzenia schludnych stron.
+                        </p>
+
+                        <p>
+                            Większość swojego wolnego czasu poświęcam na naukę i tworzenie projektów jednak pod koniec dnia zawszę znajdę czas na oglądanie memów lub granie w gry komputerowe.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -88,9 +161,34 @@
                     </div>
                 </div>
             </section>
+
+            <section class="projects">
+                <span class="title"> Projekty </span>
+                <div class="projects__list">
+                    <div class="projects__list__item" data-project="react posty i albumy">
+                        <img src="./src/img/projektEventPage.JPG" alt="projekt reactjs posty i albumy">
+                    </div>
+                    <div class="projects__list__item" data-project="portfolio">
+                        <img src="./src/img/projektPortfolio.JPG" alt="projekt portfolio">
+                    </div>
+                    <div class="projects__list__item" data-project="newsletter">
+                        <img src="./src/img/projektNewsletter.JPG" alt="projekt newsletter">
+                    </div>
+                    <div class="projects__list__item" data-project="strona firmy">
+                        <img src="./src/img/projektStronaFirmy.JPG" alt="projekt strona firmy">
+                    </div>
+                    <div class="projects__list__item" data-project="event page">
+                        <img src="./src/img/projektEventPage.JPG" alt="projekt event page">
+                    </div>
+                    <div class="projects__list__item" data-project="quizzes">
+                        <img src="./src/img/projektQuizzes.JPG" alt="projekt quizzes">
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
     <script src="./src/js/tech-and-tools.js"></script>
+    <script src="./src/js/projects.js"></script>
 </body>
 </html>

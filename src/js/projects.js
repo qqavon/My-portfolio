@@ -4,7 +4,7 @@ const projectsArr = [
         title: "Event page",
         stack: ['vue'],
         description: '<p> Strona prezentująca organizowane wydarzenie. Projekt powstał w celu praktycznej nauki Vue. </p>',
-        features: ["Responsywna", "Interaktywny plan wydarzeń", "Parallax", "Karuzela tekstu (na mniejszych ekranach)"],
+        features: ["Responsywna", "Interaktywny plan wydarzeń", "Parallax", "Karuzela tekstu (na mniejszych wyświetlaczach)"],
         gitHubUrl: 'https://github.com/qqavon/eventpage#event-page',
         demoUrl: 'https://qqavon.github.io/eventpage'
     },
@@ -30,7 +30,7 @@ const projectsArr = [
         name: "strona firmy",
         title: "Strona firmy",
         stack: ['vue'],
-        description: '<p> ... Strona wykonana w celu praktycznej nauki Vue </p>',
+        description: '<p> Strona zaprogramowana w celu praktycznego ćwiczenia Vue. Projekt został zaprojektowany w AdobeXd, następnie wykonany. </p>',
         features: ["Responsywna", "Multi page", "Karuzela zdjeć", "Mapa", "Lazy loading komponentów"],
         gitHubUrl: 'https://github.com/qqavon/stronaFirmy#strona-firmy',
         demoUrl: 'https://qqavon.github.io/stronaFirmy/'

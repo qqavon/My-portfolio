@@ -12,8 +12,29 @@ body {
     background-color: #1C1C27;
 }
 
+.canvas-animation {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    z-index: -1;
+}
+canvas {
+    max-width: 100%;
+
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+}
+
 i {
     font-size: 1.85em;
+}
+
+b {
+    transition: color .2s ease-in-out;
+}
+b:hover {
+    color: rgb(166, 183, 240);
 }
 
 main {
@@ -24,7 +45,7 @@ main {
     justify-self: center;
 
     display: grid;
-    grid-gap: 80px;
+    grid-gap: 40px;
 
     max-width: 1024px;
     width: 100%;
@@ -32,13 +53,14 @@ main {
 
 .title {
     width: 100%;
-    padding: 4px;
-    margin-bottom: 15px;
+    padding: 6px;
     font-size: 20px;
     font-weight: 700;
 
     color: #E3E3E3;
     background-color: #5175EC;
+
+    border-radius: 4px;
 }
 .title--smaller {
     font-size: 14px;
@@ -46,7 +68,8 @@ main {
 }
 
 section {
-    padding: 15px;
+    padding: 0 15px;
+    padding-top: 60px;
     border-top: solid rgb(21, 21, 31) 3px;
 }
 
@@ -62,7 +85,7 @@ img {
     outline: none;
     background-color: transparent;
     border-radius: 100%;
-    border: solid #E3E3E3 2px;
+    border: solid #E3E3E3 1px;
 }
 .button-circle--link {
     display: grid;

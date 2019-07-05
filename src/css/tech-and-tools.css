@@ -46,7 +46,7 @@
     width: 50px;
     height: 50px;
 
-    border: solid #E3E3E3 2px;
+    border: solid #E3E3E3 1px;
     border-radius: 100%;
     
     transition: border-color .1s ease-in-out, background-color .1s ease-in-out;
@@ -59,7 +59,7 @@
 }
 .tech-and-tools__list__item[class~=selected] {
     border-color: #5175EC;
-    background-color: rgba(81, 117, 236, 0.15);
+    background-color: rgba(81, 117, 236, .07);
 }
 
 @media screen and (min-width: 768px) {

@@ -40,7 +40,7 @@ const projectsArr = [
         title: "Portfolio",
         stack: ['html5', 'css3', 'js'],
         description: 'Portfolio które właśnie przeglądasz.',
-        features: ["Responsywna"],
+        features: ["Responsywna", "Animacje zrobione w canvas API"],
         gitHubUrl: 'https://github.com/qqavon/My-portfolio#portfolio',
         demoUrl: 'https://qqavon.github.io/My-portfolio/'
     },

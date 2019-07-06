@@ -10,6 +10,9 @@ body {
     margin: 0;
 
     background-color: #1C1C27;
+    background-image: url('../svg/background-image-1.svg');
+    background-repeat: no-repeat;
+    background-position: bottom; 
 }
 
 .canvas-animation {

@@ -10,14 +10,20 @@ window.addEventListener('resize', () => {
 })
 
 function Particle() {
-    this.minSize = 100
+    this.start = Math.random() * 1
+
+    this.minSize = 200
     this.maxSize = canvasElement.width/4
     
     this.size = Math.random() * (this.maxSize - this.minSize) + this.minSize
     this.currentSize = this.size
     
     this.x = Math.random() * canvasElement.width
-    this.y = -this.size*3 
+    this.y = -this.size
+
+    //init
+    this.y = (canvasElement.height/1.25) * this.start
+    this.currentSize = this.size * this.start
 
     this.spd = .25 + (Math.random() * 2)
 
@@ -40,7 +46,7 @@ function Particle() {
         this.y += this.spd
         
         if(this.currentSize >= 0) {
-            this.currentSize = this.size * ( 1 - ( this.y / (canvasElement.height/1.5) ))
+            this.currentSize = this.size * ( 1 - ( this.y / (canvasElement.height/1.25) ))
         }
         else {
             this.size = Math.random() * (this.maxSize - this.minSize) + this.minSize
@@ -57,7 +63,7 @@ function Particle() {
 const p = new Particle()
 const particles = []
 
-let quantity = Math.floor(canvasElement.width/65)
+let quantity = Math.floor(canvasElement.width/50)
 for(let i = 0; i < quantity; i++) {
     particles[i] = new Particle()
 }

@@ -2,73 +2,67 @@ const techAndToolsData = [
     {
         name: "html",
         fullName: "HTML5",
-        description: "Opis html",
+        description: "Wykorzystuję wprowadzone w HTML5 znaczniki. Staram się zachować czysty i przejrzysty kod.",
         logo: "html5"
     },
     {
         name: "css",
         fullName: "CSS3",
-        description: "Opis css",
+        description: "Przy używaniu CSS skupiam się na responsywności i estetyce strony.",
         logo: "css3"
     },
     {
         name: "js",
         fullName: "JavaScript",
-        description: "Opis js",
+        description: "JavaScript wykorzystuję do tworzenia stron internetowych i serwerów.",
         logo: "js"
     },
     {
         name: "nodejs",
         fullName: "NodeJs",
-        description: "Opis nodejs Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus molestias dignissimos doloremque aspernatur nobis hic, distinctio dolor similique libero error, porro est quis! Impedit excepturi ex amet laboriosam, sint error nobis fugiat vel, quam eveniet, et nostrum. Totam excepturi reprehenderit pariatur illum eligendi doloribus saepe doloremque quia, ex cum accusantium.",
+        description: "NodeJs używałem głównie do tworzenia serwerów REST API do własnych projektów. Napisałem też bota do Discorda, a z użyciem frameworka Electron stworzyłem aplikację okienkową.",
         logo: "nodejs"
     },
     {
         name: "mongodb",
         fullName: "MongoDB",
-        description: "Opis mongodb",
+        description: "Wykorzystywałem do projektów REST API z użyciem frameworka mongoose do NodeJs.",
         logo: "mongodb"
     },
     {
         name: "vue",
         fullName: "Vue",
-        description: "Opis vue",
+        description: "Vue jest pierwszym frameworkiem którego zacząłem się uczyć. Wykorzystuję go do tworzenia zarówno prostych, jak i bardziej złożonych stron.",
         logo: "vue"
     },
     {
         name: "sass",
-        fullName: "Sass",
-        description: "Opis sass",
+        fullName: "SCSS / Sass",
+        description: "Korzystam do usprawnienia pracy.",
         logo: "sass"
     },
     {
         name: "react",
         fullName: "ReactJs",
-        description: "Opis reactjs",
+        description: "Framework którego zacząłem się uczyć od niedawna. Do tej pory poznałem hooki i React Router DOM.",
         logo: "reactjs"
     },
     {
         name: "vscode",
         fullName: "Visual Studio Code",
-        description: "Opis vscode",
+        description: "IDE w którym tworzę wszystkie projekty.",
         logo: "vscode"
     },
     {
         name: "git",
         fullName: "Git",
-        description: "Opis git",
+        description: "Wykorzystuję go przy większości projektów.",
         logo: "git"
-    },
-    {
-        name: "gimp",
-        fullName: "Gimp",
-        description: "Opis gimp",
-        logo: "gimp"
     },
     {
         name: "adobexd",
         fullName: "Adobe Experience Design",
-        description: "Opis adobexd",
+        description: "Pomysł na UI projektuję w Adobe Experience Design. Następnie staram się odzworować zaprojektowany wygląd i układ.",
         logo: "adobexd"
     },
 ]

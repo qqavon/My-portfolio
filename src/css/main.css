@@ -64,10 +64,11 @@ main {
     background-color: #5175EC;
 
     border-radius: 4px;
+    margin: 0;
 }
 .title--smaller {
     font-size: 14px;
-    padding: 2px;
+    padding: 4px 6px;
 }
 
 section {
@@ -111,4 +112,9 @@ img {
 
 .rotate--left {
     transform: rotateZ(180deg) translateX(2px);
+}
+
+::selection {
+    background-color: #1C1C27;
+    color: #5175EC;
 }

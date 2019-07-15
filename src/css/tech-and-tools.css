@@ -25,6 +25,9 @@
 }
 .tech-and-tools__container__selected__description {
     max-width: 600px;
+    background-color: rgb(21, 21, 31);
+    padding: 8px;
+    border-radius: 6px;
 }
 
 .tech-and-tools__list {

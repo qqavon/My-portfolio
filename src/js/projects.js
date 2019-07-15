@@ -45,13 +45,13 @@ const projectsArr = [
         demoUrl: 'https://qqavon.github.io/My-portfolio/'
     },
     {
-        name: "React posty i albumy",
-        title: "React posty i albumy",
+        name: "albumy",
+        title: "Albumy",
         stack: ['reactjs'],
-        description: 'Opis projektu React posty i albumy',
-        features: ["FICZER 1", "FICZER 2"],
-        gitHubUrl: '',
-        demoUrl: ''
+        description: 'Aplikacja pobierająca albumy ze zdjęciami z API jsonplaceholder.',
+        features: ["Pobieranie i wyświetlanie albumów.", "Podczas scrollowania pobierane są następne albumy.", "Tworzenie własnego motywu.", "Dodawanie albumu do ulubionych."],
+        gitHubUrl: 'https://github.com/qqavon/albums#albums',
+        demoUrl: 'https://qqavon.github.io/albums/'
     },
 ]
 
@@ -106,9 +106,6 @@ function selectProject(index) {
         featuresHtml += `<li class="selected-project__features__list__item"> ${feature} </li>`
     })
     selectedProjectFeatures.innerHTML = featuresHtml
-
-    console.log(projectData.demoUrl)
-    console.log(projectData.gitHubUrl)
 
     selectedProjectDemoUrl.setAttribute('href', projectData.demoUrl)
     selectedProjectGithubUrl.setAttribute('href', projectData.gitHubUrl)

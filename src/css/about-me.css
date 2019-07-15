@@ -1,0 +1,8 @@
+.about-me {
+    display: grid;
+    justify-items: center;
+}
+
+.about-me__me__description {
+    color: #E3E3E3;
+}

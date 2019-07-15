@@ -1,406 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#000000">
-    <meta property="og:title" content="Jakub Nowak - Junior frontend developer">
-    <meta property="og:image" content="src/img/preview.PNG">
-    <title>Portfolio - Jakub Nowak</title>
-    <link rel="stylesheet" href="./src/css/main.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <title>Document</title>
     <link rel="icon" href="./src/favicon.ico">
+    <meta name="theme-color" content="#5175EC">
+    <meta property="og:title" content="Jakub Nowak - Junior frontend developer">
+    <meta property="og:image" content="src/img/preview.gif">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/hero.css">
+    <link rel="stylesheet" href="./src/css/about-me.css">
+    <link rel="stylesheet" href="./src/css/tech-and-tools.css">
+    <link rel="stylesheet" href="./src/css/projects.css">
+    <link rel="stylesheet" href="./src/css/contact.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <script src="https://kit.fontawesome.com/3ac5df88bb.js"></script>
+    <script src="./src/js/logos.js"></script>
 </head>
 <body>
-    <nav>
-        <ul class="nav_list">
-            <li class="nav_list_item active"></li>
-            <li class="nav_list_item"></li>
-            <li class="nav_list_item"></li>
-            <li class="nav_list_item"></li>
-            <li class="nav_list_item"></li>
-            <li class="nav_list_item"></li>
-        </ul>
-        <span class="nav_sectionName">Początek</span>
-        <div class="nav_mobileButton">
-            <span class="nav_mobileButton_line"></span>
-            <span class="nav_mobileButton_line"></span>
-            <span class="nav_mobileButton_line"></span>
-        </div>
-    </nav>
-    <div class="mobileMenu">
-        <ul class="mobileMenu_list">
-            <li class="mobileMenu_list_item">
-                <span class="mobileMenu_list_item_sectionName">Początek</span>
-                <span class="mobileMenu_list_item_cube active"></span>
-            </li>
-            <li class="mobileMenu_list_item">
-                <span class="mobileMenu_list_item_sectionName">O mnie</span>
-                <span class="mobileMenu_list_item_cube"></span>
-            </li>
-            <li class="mobileMenu_list_item">
-                <span class="mobileMenu_list_item_sectionName">Technologie</span>
-                <span class="mobileMenu_list_item_cube"></span>
-            </li>
-            <li class="mobileMenu_list_item">
-                <span class="mobileMenu_list_item_sectionName">Narzędzia</span>
-                <span class="mobileMenu_list_item_cube"></span>
-            </li>
-            <li class="mobileMenu_list_item">
-                <span class="mobileMenu_list_item_sectionName">Projekty</span>
-                <span class="mobileMenu_list_item_cube"></span>
-            </li>
-            <li class="mobileMenu_list_item">
-                <span class="mobileMenu_list_item_sectionName">Kontakt</span>
-                <span class="mobileMenu_list_item_cube"></span>
-            </li>
-        </ul>
+    <div class="canvas-animation">
+        <canvas></canvas>
     </div>
 
     <main>
-        <section class="welcome">
-            <span class="hidden">Jakub Nowak</span>
-            <span class="hidden">Junior front-end developer</span>
-        </section>
-
-        <section class="aboutMe hidden">
-            <span class="title">O mnie</span>
-            <span class="description">
-                <span class="hidden">Swoją przygodę z programowaniem </span>
-                <span class="hidden">rozpoczałem na początku 2017 roku.</span>
-                <span class="hidden">Najpierw programowałem w Javie i C#.</span>
-                <span class="hidden">Chciałem też zobaczyć jak programuje</span>
-                <span class="hidden">się strony internetowe.</span>
-                <span class="hidden">Zacząłem od PHP, przeszedłem do JavaScript</span>
-                <span class="hidden">wykorzystując go w NodeJs jak i do frontendu.</span>
-                <span class="hidden">W wolnym czasie uczę się</span>
-                <span class="hidden">nowych technologii, gram</span>
-                <span class="hidden">w gry i słucham muzyki.</span>
-            </span>
-        </section>
-
-        <section class="tech hidden">
-            <span class="title">Technologie</span>
-            <ul class="tech_list">
-                <li class="tech_list_item hidden">
-                    <i class="devicon-html5-plain colored"></i>
-                    <span class="hidden">HTML</span>
-                </li>
-                <li class="tech_list_item hidden">
-                    <i class="devicon-css3-plain colored"></i>
-                    <span class="hidden">CSS</span>
-                </li>
+        <div class="selected-project hidden">
+            <div class="selected-project__buttons">
+                <div class="selected-project__buttons__nav">
+                    <button class="button-circle" id="prevSelected"> <i class="fas fa-chevron-right rotate--left"></i> </button>
+                    <button class="button-circle" id="nextSelected"> <i class="fas fa-chevron-right"></i> </button>
+                </div>
                 
-                <li class="tech_list_item hidden">
-                    <i class="devicon-javascript-plain colored"></i>
-                    <span class="hidden">JavaScript</span>
-                </li>
-                
-                <li class="tech_list_item hidden">
-                    <i class="devicon-nodejs-plain colored"></i>
-                    <span class="hidden">NodeJs</span>
-                </li>
-                
-                <li class="tech_list_item hidden">
-                    <i class="devicon-express-original colored"></i>
-                    <span class="hidden">Express framework</span>
-                </li>
-                
-                <li class="tech_list_item hidden">
-                    <i class="devicon-vuejs-plain colored"></i>
-                    <span class="hidden">Vue</span>
-                </li>
-                
-                <li class="tech_list_item hidden">
-                    <i class="devicon-mongodb-plain colored"></i>
-                    <span class="hidden">MongoDB mongoose framework</span>
-                </li>
-            </ul>
-        </section>
-
-        <section class="iUse hidden">
-            <span class="title">Narzędzia</span>
-            <ul class="iUse_list">
-                    <li class="iUse_list_item hidden">
-                        <img draggable="false" src="src/img/vscode.png" alt="">
-                        <span class="hidden">VS Code</span>
-                    </li>
-                    <li class="iUse_list_item hidden">
-                        <img draggable="false" src="src/img/git.png" alt="">
-                        <span class="hidden">Git</span>
-                    </li>
-                    <li class="iUse_list_item hidden">
-                        <img draggable="false" src="src/img/adobexd.png" alt="">
-                        <span class="hidden">AdobeXd</span>
-                    </li>
-                    <li class="iUse_list_item hidden">
-                        <img draggable="false" src="src/img/gimp.png" alt="">
-                        <span class="hidden">GIMP</span>
-                    </li>
-            </ul>
-        </section>
-
-        <section class="projects hidden">
-            <span class="title">Projekty</span>
-            <ul class="projects_nav_list">
-                <li class="projects_nav_list_item active"></li>
-                <li class="projects_nav_list_item"></li>
-                <li class="projects_nav_list_item"></li>
-                <li class="projects_nav_list_item"></li>
-                <li class="projects_nav_list_item"></li>
-                <li class="projects_nav_list_item"></li>
-                <li class="projects_nav_list_item"></li>
-            </ul>
+                <div class="selected-project__buttons__close">
+                    <button class="button-circle button-circle--close" id="closeSelected">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
             
-            <div class="projects_swiper">
-                <ul class="projects_list">
-                    <li class="projects_list_item">
-                        <div class="project">
-                            <span class="project_title">Todo App</span>
-                            <div class="project_images">
-                                <div class="project_images_swiper">
-                                    <div class="project_images_swiper_item">
-                                        <img draggable="false" src="src/img/projektTodoApp.JPG" alt="todo 1">
-                                    </div>
-                                </div>
-    
-                                <ul class="project_images_nav">
-                                    <li class="project_images_nav_item active"></li>
-                                </ul>
-                            </div>
-                            <span class="project_description">
-                                Pierwszy napisany projekt w Vue CLI 3 z wykorzystaniem bazy danych MongoDB. Projekt umożliwia rejestracje i logowanie użytkownika.
-                                Zadania zawierają opcjonalny termin.
-                            </span>
-                            <ul class="project_stack_list">
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-vuejs-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-nodejs-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-express-original colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-mongodb-plain colored"></i>
-                                </li>
-                            </ul>
-                            <div class="project_buttons">
-                                <a href="https://qqavon.github.io/MEVN-todo-app/#/login" class="button" target="_blank">Podgląd</a>
-                                <a href="https://github.com/qqavon/MEVN-todo-app#todo-app-pencil" target="_blank" class="button">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="projects_list_item">
-                        <div class="project">
-                            <span class="project_title">Quizzes</span>
-                            <div class="project_images">
-                                <div class="project_images_swiper">
-                                    <div class="project_images_swiper_item">
-                                        <img draggable="false" src="src/img/projektQuizzes.JPG" alt="Quizzes 1">
-                                    </div>
-                                </div>
-                                <ul class="project_images_nav">
-                                    <li class="project_images_nav_item active"></li>
-                                </ul>
-                            </div>
-                            <span class="project_description">
-                                Użytkownik po rejestracji może tworzyć pytania które będą odpowiadane przez zalogowanych użytkowników.
-                            </span>
-                            <ul class="project_stack_list">
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-vuejs-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-nodejs-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-express-original colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-mongodb-plain colored"></i>
-                                </li>
-                            </ul>
-                            <div class="project_buttons">
-                                <a href="https://qqavon.github.io/quizzes/#/" class="button" target="_blank">Podgląd</a>
-                                <a href="https://github.com/qqavon/quizzes#quizzes" target="_blank" class="button">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="projects_list_item">
-                        <div class="project">
-                            <span class="project_title">Event page</span>
-                            <div class="project_images">
-                                <div class="project_images_swiper">
-                                    <div class="project_images_swiper_item">
-                                        <img draggable="false" src="src/img/projektEventPage.JPG" alt="Event 1">
-                                    </div>
-                                </div>
-                                <ul class="project_images_nav">
-                                    <li class="project_images_nav_item active"></li>
-                                </ul>
-                            </div>
-                            <span class="project_description">
-                                Strona prezentująca organizowane wydarzenie.
-                            </span>
-                            <ul class="project_stack_list">
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-vuejs-plain colored"></i>
-                                </li>
-                            </ul>
-                            <div class="project_buttons">
-                                <a href="https://qqavon.github.io/eventpage/#/" class="button" target="_blank">Podgląd</a>
-                                <a href="https://github.com/qqavon/eventpage#event-page" class="button" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="projects_list_item">
-                        <div class="project">
-                            <span class="project_title">Lorem impsum</span>
-                            <div class="project_images">
-                                <div class="project_images_swiper">
-                                    <div class="project_images_swiper_item">
-                                        <img draggable="false" src="src/img/projektloremImpsum.JPG" alt="Event 1">
-                                    </div>
-                                </div>
-                                <ul class="project_images_nav">
-                                    <li class="project_images_nav_item active"></li>
-                                </ul>
-                            </div>
-                            <span class="project_description">
-                                Strona służy głównie do prezentacji animacji wykonanych w canvasie.
-                            </span>
-                            <ul class="project_stack_list">
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-html5-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-css3-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-javascript-plain colored"></i>
-                                </li>
-                            </ul>
-                            <div class="project_buttons">
-                                <a href="https://qqavon.github.io/Lorem-ipsum/" class="button" target="_blank">Podgląd</a>
-                                <a href="https://github.com/qqavon/Lorem-ipsum#event-page" class="button" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="projects_list_item">
-                        <div class="project">
-                            <span class="project_title">Portfolio</span>
-                            <div class="project_images">
-                                <div class="project_images_swiper">
-                                    <div class="project_images_swiper_item">
-                                        <img draggable="false" src="src/img/projektPortfolio.JPG" alt="Event 1">
-                                    </div>
-                                </div>
-                                <ul class="project_images_nav">
-                                    <li class="project_images_nav_item active"></li>
-                                </ul>
-                            </div>
-                            <span class="project_description">
-                                Portfolio które właśnie przeglądasz.
-                            </span>
-                            <ul class="project_stack_list">
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-html5-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-css3-plain colored"></i>
-                                </li>
-                                <li class="project_stack_list_item">
-                                    <i class="devicon-javascript-plain colored"></i>
-                                </li>
-                            </ul>
-                            <div class="project_buttons">
-                                <a href="https://github.com/qqavon/My-portfolio" class="button" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="projects_list_item">
-                            <div class="project">
-                                <span class="project_title">Strona firmy</span>
-                                <div class="project_images">
-                                    <div class="project_images_swiper">
-                                        <div class="project_images_swiper_item">
-                                            <img draggable="false" src="src/img/projektStronaFirmy.JPG" alt="Strona firmy 1">
-                                        </div>
-                                    </div>
-        
-                                    <ul class="project_images_nav">
-                                        <li class="project_images_nav_item active"></li>
-                                    </ul>
-                                </div>
-                                <span class="project_description">
-                                    Strona przedstawiająca informacje o firme, zaprojektowana w AdobeXd.
-                                </span>
-                                <ul class="project_stack_list">
-                                    <li class="project_stack_list_item">
-                                        <i class="devicon-vuejs-plain colored"></i>
-                                    </li>
-                                </ul>
-                                <div class="project_buttons">
-                                    <a href="https://qqavon.github.io/stronaFirmy/" class="button" target="_blank">Podgląd</a>
-                                    <a href="https://github.com/qqavon/stronaFirmy#strona-firmy" target="_blank" class="button">GitHub</a>
-                                </div>
-                            </div>
-                        </li>
-    
-    
-                        <li class="projects_list_item">
-                            <div class="project">
-                                <span class="project_title">Newsletter</span>
-                                <div class="project_images">
-                                    <div class="project_images_swiper">
-                                        <div class="project_images_swiper_item">
-                                            <img draggable="false" src="src/img/projektNewsletter.JPG" alt="Newsletter 1">
-                                        </div>
-                                    </div>
-                                    <ul class="project_images_nav">
-                                        <li class="project_images_nav_item active"></li>
-                                    </ul>
-                                </div>
-                                <span class="project_description">
-                                    Formularz zawierający prostą walidację i animacje wykonane w canvasie. Kuleczki przemieszczają się szybciej wzdłóż osi Y podczas podawania e-malia, jeżeli jest błędny, będą się trząść. 
-                                </span>
-                                <ul class="project_stack_list">
-                                    <li class="project_stack_list_item">
-                                        <i class="devicon-html5-plain colored"></i>
-                                    </li>
-                                    <li class="project_stack_list_item">
-                                        <i class="devicon-css3-plain colored"></i>
-                                    </li>
-                                    <li class="project_stack_list_item">
-                                        <i class="devicon-javascript-plain colored"></i>
-                                    </li>
-                                </ul>
-                                <div class="project_buttons">
-                                    <a href="https://qqavon.github.io/newsletter/" class="button" target="_blank">Podgląd</a>
-                                    <a href="https://github.com/qqavon/newsletter#newsletter" class="button" target="_blank">GitHub</a>
-                                </div>
-                            </div>
-                        </li>
-                    
-                    
+            <span class="selected-project__buttons__title"> Tytuł projektu </span>
+            
+            <div class="selected-project__stack">
+                <span class="title title--selected-project"> Stack </span>
+                <div class="selected-project__stack__list">
+                    <div class="selected-project__stack__list__item"></div>
+                </div>
+            </div>
+            
+            <div class="selected-project__description">
+                <span class="title title--selected-project"> Opis </span>
+                <p class="selected-project__description__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nesciunt sapiente quis soluta magni? At facilis totam recusandae nobis nihil tempore repellendus quis cupiditate nesciunt maiores, quasi impedit similique cum iure mollitia distinctio qui. Molestias quaerat, aperiam cumque, ut id, tempore fugiat magni deleniti quidem commodi ullam nihil laboriosam aliquam! </p>
+            </div>
+            
+            <div class="selected-project__features">
+                <span class="title title--selected-project"> Cechy </span>
+                <ul class="selected-project__features__list">
+                    <li class="selected-project__features__list__item">Ficzer 1</li>
+                    <li class="selected-project__features__list__item">Ficzer 2</li>
+                    <li class="selected-project__features__list__item">Ficzer 3</li>
                 </ul>
             </div>
-        </section>
+            
+            <div class="selected-project__links">
+                <div class="selected-project__links__col">
+                    <a class="button-circle button-circle--link" href="" id="selectedProjectGithubUrl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <span class="title title--selected-project">
+                        GitHub
+                    </span>
+                </div>
+    
+                <div class="selected-project__links__col">
+                    <a class="button-circle button-circle--link" href="" id="selectedProjectDemoUrl">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <span class="title title--selected-project"> Podgląd </span>
+                </div>
+            </div>
+        </div>
 
-        <section class="contact">
-            <span class="title">Kontakt</span>
-            <span class="contact_item hidden">email: qqavon@gmail.com</span>
-        </section>
+        <div class="container">
+            <section class="hero">
+                <div class="hero__me">
+                    <span>Jakub Nowak</span>
+                    <span>Junior front-end developer</span>
+                </div>
+            </section>
+    
+            <section class="about-me">
+                <div class="about-me__me">
+                    <span class="title">O mnie</span>
+                    <div class="about-me__me__description">
+                        <p>
+                            Pierwsze kroki postawiłem w programowaniu 2 lata temu w języku <b> Java </b> (SE) tworząc proste aplikacje okienkowe.
+                            Rok później zainteresował mnie <b> front-end </b>. Możliwości jakie oferuje i jego dynamiczny rozwój spowodował, że stał się moim głównym obiektem zainteresowań.
+                        </p>
+
+                        <p>
+                            Od tamtego czasu stale staram rozwijać się we front-endzie ucząć się nowych frameworków i poznając standardy. Poznając język <b> JavaScript </b> zacząłem go również wykorzystywać w  <b> NodeJs </b> tworząc serwery <b> REST API </b> do projektów.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tech-and-tools">
+                <div class="tech-and-tools__container">
+                    <span class="title"> Technologie </span>
+
+                    <div class="tech-and-tools__list">
+                        <div class="tech-and-tools__list__item selected" data-tech="html">
+                            <i class="devicon-html5-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="css">
+                            <i class="devicon-css3-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="js">
+                            <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="nodejs">
+                            <i class="devicon-nodejs-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="mongodb">
+                            <i class="devicon-mongodb-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="vue">
+                            <i class="devicon-vuejs-plain colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="sass">
+                            <i class="devicon-sass-original colored"></i>
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="react">
+                            <i class="devicon-react-original colored"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-and-tools__container">
+                    <span class="title"> Narzędzia </span>
+
+                    <div class="tech-and-tools__list">
+                        <div class="tech-and-tools__list__item" data-tech="vscode">
+                            <img src="./src/img/vscode.png" alt="vscode icon">
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="git">
+                            <img src="./src/img/git.png" alt="git icon">
+                        </div>
+                        <div class="tech-and-tools__list__item" data-tech="adobexd">
+                            <img src="./src/img/adobexd.png" alt="adobexd icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-and-tools__container--description">
+                    <div class="tech-and-tools__container__selected">
+                        <span class="tech-and-tools__container__selected__name"></span>
+                        <div class="tech-and-tools__container__selected__logo"></div>
+                        <span class="tech-and-tools__container__selected__description"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects">
+                <span class="title"> Projekty </span>
+                <div class="projects__list">
+                    <div class="projects__list__item" data-project="albumy">
+                        <img src="./src/img/projektAlbumy.JPG" alt="projekt reactjs posty i albumy">
+                    </div>
+                    <div class="projects__list__item" data-project="portfolio">
+                        <img src="./src/img/projektPortfolio.JPG" alt="projekt portfolio">
+                    </div>
+                    <div class="projects__list__item" data-project="newsletter">
+                        <img src="./src/img/projektNewsletter.JPG" alt="projekt newsletter">
+                    </div>
+                    <div class="projects__list__item" data-project="strona firmy">
+                        <img src="./src/img/projektStronaFirmy.JPG" alt="projekt strona firmy">
+                    </div>
+                    <div class="projects__list__item" data-project="event page">
+                        <img src="./src/img/projektEventPage.JPG" alt="projekt event page">
+                    </div>
+                    <div class="projects__list__item" data-project="quizzes">
+                        <img src="./src/img/projektQuizzes.JPG" alt="projekt quizzes">
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                <span class="title"> Kontakt i linki </span>
+                <div class="contact__list">
+                    <div class="contact__list__item">
+                        <span class="title title--smaller">Email</span>
+                        <span>qqavon@gmail.com</span>
+                    </div>
+                    <div class="contact__list__item">
+                        <span class="title title--smaller">GitHub</span>
+                        <a href="https://github.com/qqavon">github.com/qqavon</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        
     </main>
 
-    <script src="./src/js/main.js"></script>
+    <script src="./src/js/tech-and-tools.js"></script>
+    <script src="./src/js/projects.js"></script>
+    <script src="./src/js/canvas.js"></script>
 </body>
 </html>

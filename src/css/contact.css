@@ -1,0 +1,22 @@
+.contact {
+    margin-bottom: 50px;
+    color: #E3E3E3;
+}
+
+.contact__list {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.contact__list__item a, .contact__list__item span:last-child {
+    text-decoration: none;
+    margin-left: 8px;
+    color: #E3E3E3;
+}
+
+@media screen and (min-width: 500px) {
+    .contact__list {
+        grid-template-columns: 1fr 1fr;
+    }
+}

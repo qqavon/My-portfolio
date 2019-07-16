@@ -47,7 +47,7 @@ const projectsArr = [
     {
         name: "albumy",
         title: "Albumy",
-        stack: ['reactjs'],
+        stack: ['reactjs', 'sass'],
         description: 'Aplikacja pobierająca albumy ze zdjęciami z API jsonplaceholder.',
         features: ["Pobieranie i wyświetlanie albumów.", "Podczas scrollowania pobierane są następne albumy.", "Tworzenie własnego motywu.", "Dodawanie albumu do ulubionych."],
         gitHubUrl: 'https://github.com/qqavon/albums#albums',

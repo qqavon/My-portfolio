@@ -56,11 +56,11 @@ const projectsArr = [
 ]
 
 const projectsElement = document.querySelectorAll('.projects__list__item')
-const selectedProjectElement = document.querySelector('.selected-project')
 const nextSelectedBtn = document.querySelector('#nextSelected')
 const prevSelectedBtn = document.querySelector('#prevSelected')
 const closeSelectedBtn = document.querySelector('#closeSelected')
 
+const selectedProjectElement = document.querySelector('.selected-project')
 const selectedProjectTitle = document.querySelector('.selected-project__buttons__title')
 const selectedProjectStack = document.querySelector('.selected-project__stack__list')
 const selectedProjectDescription = document.querySelector('.selected-project__description__text')
@@ -120,9 +120,11 @@ function closeSelectedProject() {
 function nextSelectedProject() {
     const index = selectedProjectIndex+1 > projectsQuantity-1 ? 0 : selectedProjectIndex+1
     selectProject(index)
+    transitionAnimation('selected-project-wrapper')
 }
 
 function prevSelectedProject() {
     const index = selectedProjectIndex-1 < 0 ? projectsQuantity-1 : selectedProjectIndex-1
     selectProject(index)
+    transitionAnimation('selected-project-wrapper')
 }

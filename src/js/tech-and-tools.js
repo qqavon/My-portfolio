@@ -78,6 +78,8 @@ const techItems = document.querySelectorAll('.tech-and-tools__list__item')
 //i przełączanie klasy dodająca styl
 techItems.forEach(item => {
     item.addEventListener('click', () => {
+        transitionAnimation('tech-and-tools__container__selected')
+
         const techName = item.getAttribute("data-tech")
         const techData = techAndToolsData.filter(item => item.name == techName)[0]
 

@@ -39,44 +39,46 @@
                 </div>
             </div>
             
-            <span class="selected-project__buttons__title"> Tytuł projektu </span>
-            
-            <div class="selected-project__stack">
-                <span class="title title--selected-project"> Stack </span>
-                <div class="selected-project__stack__list">
-                    <div class="selected-project__stack__list__item"></div>
+            <div class="selected-project-wrapper fade">
+                <span class="selected-project__buttons__title"> Tytuł projektu </span>
+                
+                <div class="selected-project__stack">
+                    <span class="title title--selected-project"> Stack </span>
+                    <div class="selected-project__stack__list">
+                        <div class="selected-project__stack__list__item"></div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="selected-project__description">
-                <span class="title title--selected-project"> Opis </span>
-                <p class="selected-project__description__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nesciunt sapiente quis soluta magni? At facilis totam recusandae nobis nihil tempore repellendus quis cupiditate nesciunt maiores, quasi impedit similique cum iure mollitia distinctio qui. Molestias quaerat, aperiam cumque, ut id, tempore fugiat magni deleniti quidem commodi ullam nihil laboriosam aliquam! </p>
-            </div>
-            
-            <div class="selected-project__features">
-                <span class="title title--selected-project"> Cechy </span>
-                <ul class="selected-project__features__list">
-                    <li class="selected-project__features__list__item">Ficzer 1</li>
-                    <li class="selected-project__features__list__item">Ficzer 2</li>
-                    <li class="selected-project__features__list__item">Ficzer 3</li>
-                </ul>
-            </div>
-            
-            <div class="selected-project__links">
-                <div class="selected-project__links__col">
-                    <a class="button-circle button-circle--link" href="" id="selectedProjectGithubUrl">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <span class="title title--selected-project">
-                        GitHub
-                    </span>
+                
+                <div class="selected-project__description">
+                    <span class="title title--selected-project"> Opis </span>
+                    <p class="selected-project__description__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nesciunt sapiente quis soluta magni? At facilis totam recusandae nobis nihil tempore repellendus quis cupiditate nesciunt maiores, quasi impedit similique cum iure mollitia distinctio qui. Molestias quaerat, aperiam cumque, ut id, tempore fugiat magni deleniti quidem commodi ullam nihil laboriosam aliquam! </p>
                 </div>
-    
-                <div class="selected-project__links__col">
-                    <a class="button-circle button-circle--link" href="" id="selectedProjectDemoUrl">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                    <span class="title title--selected-project"> Podgląd </span>
+                
+                <div class="selected-project__features">
+                    <span class="title title--selected-project"> Cechy </span>
+                    <ul class="selected-project__features__list">
+                        <li class="selected-project__features__list__item">Ficzer 1</li>
+                        <li class="selected-project__features__list__item">Ficzer 2</li>
+                        <li class="selected-project__features__list__item">Ficzer 3</li>
+                    </ul>
+                </div>
+                
+                <div class="selected-project__links">
+                    <div class="selected-project__links__col">
+                        <a class="button-circle button-circle--link" href="" id="selectedProjectGithubUrl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <span class="title title--selected-project">
+                            GitHub
+                        </span>
+                    </div>
+        
+                    <div class="selected-project__links__col">
+                        <a class="button-circle button-circle--link" href="" id="selectedProjectDemoUrl">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <span class="title title--selected-project"> Podgląd </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,7 +156,7 @@
                 </div>
 
                 <div class="tech-and-tools__container--description">
-                    <div class="tech-and-tools__container__selected">
+                    <div class="tech-and-tools__container__selected fade">
                         <span class="tech-and-tools__container__selected__name"></span>
                         <div class="tech-and-tools__container__selected__logo"></div>
                         <span class="tech-and-tools__container__selected__description"></span>
@@ -204,6 +206,7 @@
         
     </main>
 
+    <script src="./src/js/animation.js"></script>
     <script src="./src/js/tech-and-tools.js"></script>
     <script src="./src/js/projects.js"></script>
     <script src="./src/js/canvas.js"></script>

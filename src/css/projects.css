@@ -96,6 +96,12 @@
     opacity: 0;
 }
 
+.selected-project-wrapper {
+    display: grid;
+    align-content: start;
+    grid-gap: 15px;
+}
+
 .selected-project__buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -153,6 +159,15 @@
 }
 .selected-project__features__list__item {
     padding: 2px;
+}
+
+.fade {
+    transition: opacity .3s ease-in, transform .3s ease-out;
+}
+.fade.fade-hide {
+    transition: none;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 @media screen and (min-width: 452px) {

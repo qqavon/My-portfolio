@@ -52,7 +52,7 @@ function Particle() {
             this.size = Math.random() * (this.maxSize - this.minSize) + this.minSize
             this.currentSize = this.size
 
-            this.y = -this.size*2
+            this.y = -this.size*3
             this.x = (-this.currentSize/2) + (Math.random() * canvasElement.width) + (this.currentSize/2)
         }
         

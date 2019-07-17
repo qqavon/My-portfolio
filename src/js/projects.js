@@ -109,6 +109,8 @@ function selectProject(index) {
 
     selectedProjectDemoUrl.setAttribute('href', projectData.demoUrl)
     selectedProjectGithubUrl.setAttribute('href', projectData.gitHubUrl)
+
+    transitionAnimation('selected-project-wrapper')
 }
 
 function closeSelectedProject() {

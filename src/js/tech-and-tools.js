@@ -20,7 +20,7 @@ const techAndToolsData = [
     {
         name: "nodejs",
         fullName: "NodeJs",
-        description: "NodeJs używałem głównie do tworzenia serwerów REST API do własnych projektów. Napisałem też bota do Discorda, a z użyciem frameworka Electron stworzyłem aplikację okienkową.",
+        description: "NodeJs używałem głównie do tworzenia serwerów REST API do własnych projektów.",
         logo: "nodejs"
     },
     {

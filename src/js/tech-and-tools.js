@@ -44,7 +44,7 @@ const techAndToolsData = [
     {
         name: "react",
         fullName: "ReactJs",
-        description: "Framework którego zacząłem się uczyć od niedawna. Do tej pory poznałem hooki i React Router DOM.",
+        description: "Framework którego zacząłem się uczyć od niedawna. Do tej pory poznałem hooks i React Router.",
         logo: "reactjs"
     },
     {

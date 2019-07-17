@@ -44,7 +44,7 @@ const techAndToolsData = [
     {
         name: "react",
         fullName: "ReactJs",
-        description: "Biblioteka której niedawno zacząłem się uczyć. Do tej pory poznałem hooks i React Router.",
+        description: "Biblioteka której niedawno zacząłem się uczyć. Do tej pory nauczyłem się hooks i React Router.",
         logo: "reactjs"
     },
     {

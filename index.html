@@ -16,14 +16,39 @@
     <link rel="stylesheet" href="./src/css/tech-and-tools.css">
     <link rel="stylesheet" href="./src/css/projects.css">
     <link rel="stylesheet" href="./src/css/contact.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <script src="https://kit.fontawesome.com/3ac5df88bb.js"></script>
     <script src="./src/js/logos.js"></script>
 </head>
 <body>
+    
     <div class="canvas-animation">
         <canvas></canvas>
     </div>
+
+    
+    <nav>
+        <div class='nav__mobileMenu'>
+            <span data-section="about-me"> O mnie </span>
+            <span data-section="tech-and-tools"> Technologie / Narzędzia </span>
+            <span data-section="projects"> Projekty </span>
+            <span data-section="contact"> Kontakt i linki </span>
+        </div>
+
+        <div class="nav__container">
+
+            <div>
+
+            </div>
+
+            <div class="mobileNavBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>    
+    </nav>
 
     <main>
         <div class="selected-project hidden">
@@ -210,6 +235,7 @@
     <script src="./src/js/animation.js"></script>
     <script src="./src/js/tech-and-tools.js"></script>
     <script src="./src/js/projects.js"></script>
+    <script src="./src/js/nav.js"></script>
     <script src="./src/js/canvas.js"></script>
 </body>
 </html>

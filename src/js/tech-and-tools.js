@@ -14,7 +14,7 @@ const techAndToolsData = [
     {
         name: "js",
         fullName: "JavaScript",
-        description: "JavaScript wykorzystuję do tworzenia stron internetowych i serwerów.",
+        description: "JavaScript wykorzystuję do tworzenia stron internetowych i serwerów. Znajomość ES6 i programowania funkcyjnego.",
         logo: "js"
     },
     {
@@ -44,7 +44,7 @@ const techAndToolsData = [
     {
         name: "react",
         fullName: "ReactJs",
-        description: "Biblioteka której niedawno zacząłem się uczyć. Do tej pory nauczyłem się hooks i React Router.",
+        description: "Biblioteka której niedawno zacząłem się uczyć. Do tej pory nauczyłem się podstawowe hooki i React Router.",
         logo: "reactjs"
     },
     {

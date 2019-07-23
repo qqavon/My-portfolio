@@ -5,4 +5,11 @@
 
 .about-me__me__description {
     color: #E3E3E3;
+    background-color: rgb(21, 21, 31);
+    padding: 1px 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+.about-me__me__description p{
+    margin: 15px 0;
 }

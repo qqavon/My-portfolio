@@ -10,22 +10,19 @@ window.addEventListener('resize', () => {
 })
 
 function Particle() {
-    this.start = Math.random() * 1
-
     this.minSize = 200
     this.maxSize = canvasElement.width/4
     
     this.size = Math.random() * (this.maxSize - this.minSize) + this.minSize
     this.currentSize = this.size
-    
-    this.x = Math.random() * canvasElement.width
-    this.y = -this.size
 
-    //init
-    this.y = (canvasElement.height/1.25) * this.start
+    this.x = (Math.random() * canvasElement.width)
+    this.y = (Math.random() * canvasElement.height)
     this.currentSize = this.size * this.start
 
-    this.spd = .25 + (Math.random() * 2)
+    this.spdMin = .35 + (Math.random() * 2)
+    this.spdMax = 15
+    this.currentSpd = this.spdMax
 
     this.draw = function() {
         ctx.beginPath()
@@ -43,7 +40,10 @@ function Particle() {
     }
 
     this.update = function() {
-        this.y += this.spd
+        if(this.currentSpd > this.spdMin) {
+            this.currentSpd -= .1
+        }
+        this.y += this.currentSpd
         
         if(this.currentSize >= 0) {
             this.currentSize = this.size * ( 1 - ( this.y / (canvasElement.height/1.25) ))
@@ -52,7 +52,7 @@ function Particle() {
             this.size = Math.random() * (this.maxSize - this.minSize) + this.minSize
             this.currentSize = this.size
 
-            this.y = -this.size*3
+            this.y -= this.size*4
             this.x = (-this.currentSize/2) + (Math.random() * canvasElement.width) + (this.currentSize/2)
         }
         

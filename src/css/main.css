@@ -62,7 +62,7 @@ main {
 
     color: #E3E3E3;
     background-color: #5175EC;
-
+    border-bottom: rgb(41, 91, 255) solid 2px;
     border-radius: 4px;
     margin: 0;
 }

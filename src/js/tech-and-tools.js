@@ -14,7 +14,7 @@ const techAndToolsData = [
     {
         name: "js",
         fullName: "JavaScript",
-        description: "JavaScript wykorzystuję do tworzenia stron internetowych i serwerów. Znajomość ES6 i programowania funkcyjnego.",
+        description: "JavaScript wykorzystuję do tworzenia stron internetowych i serwerów.",
         logo: "js"
     },
     {

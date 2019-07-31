@@ -9,6 +9,12 @@
     margin-top: 15px;
 }
 
+.selected-project-wrapper {
+    display: grid;
+    align-content: start;
+    grid-gap: 15px;
+}
+
 .projects__list__item {
     position: relative;
     
@@ -18,44 +24,51 @@
     border: solid 2px;
     border-color: transparent;
     border-radius: 3px;
+    overflow: hidden;
 
     transition: border .2s ease-in-out;
 
     cursor: pointer;
 }
-
-.projects__list__item[class~=active] {
-    border-color: #5175EC;
+.projects__list__item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
 }
-.projects__list__item[class~=active]::after {
-    opacity: 0;
-}
-
 .projects__list__item::after {
     position: absolute;
-
+    
     content: "";
-
+    
     display: block;
-
+    
     top: 0;
     left: 0;
-
+    
     width: 100%;
     height: 100%;
-
+    
     background-image: linear-gradient(135deg, rgba(81, 91, 236, 0.479), rgba(161, 81, 236, 0.26));
     transition: opacity .2s ease-in-out;
 }
 .projects__list__item:hover::after {
     opacity: 0;
 }
-
 .projects__list__item img {
     object-fit: cover;
     object-position: center;
     height: 100%;
     padding: 0;
+    transition: transform .2s ease-in-out;
+}
+.projects__list__item[class~=active] {
+    border-color: #5175EC;
+}
+.projects__list__item[class~=active] img {
+    transform: scale(1.1)
+}
+.projects__list__item[class~=active]::after {
+    opacity: 0;
 }
 
 /* selected project */
@@ -65,7 +78,6 @@
     font-size: 16px;
     background-color: transparent;
     margin: 0;
-    padding: 0;
     border: none;
 }
 
@@ -99,11 +111,6 @@
     opacity: 0;
 }
 
-.selected-project-wrapper {
-    display: grid;
-    align-content: start;
-    grid-gap: 15px;
-}
 
 .selected-project__buttons {
     display: grid;
@@ -139,9 +146,12 @@
 
 .selected-project__stack__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 50px);
+    grid-template-columns: repeat(auto-fill, 50px);
+    justify-items: start;
+    justify-content: start;
     grid-gap: 8px;
-    padding-top: 5px;
+    padding: 5px;
+    border-radius: 6px;
 }
 .selected-project__stack__list__item {
     display: grid;
@@ -154,11 +164,20 @@
     border: solid 1px #E3E3E3;
     border-radius: 100%;
 }
+.selected-project__description__text {
+    background-color: #11111C;
+    border-radius: 6px;
+    padding: 10px 9px;
+    margin: 0;
+}
 
 .selected-project__features__list {
     list-style-type: none;
-    padding: 10px 9px;
+    padding: 6px;
+    padding-left: 10px;
     margin: 0;
+    background-color: #11111C;
+    border-radius: 6px;
 }
 .selected-project__features__list__item {
     padding: 2px;

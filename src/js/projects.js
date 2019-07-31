@@ -3,8 +3,8 @@ const projectsArr = [
         name: "event page",
         title: "Event page",
         stack: ['vue'],
-        description: '<p> Strona prezentująca organizowane wydarzenie. Projekt powstał w celu praktycznej nauki Vue. </p>',
-        features: ["Responsywna", "Interaktywny plan wydarzeń", "Parallax", "Karuzela tekstu (na mniejszych wyświetlaczach)"],
+        description: 'Strona prezentująca organizowane wydarzenie. Projekt powstał w celu praktycznej nauki Vue.',
+        features: [     "Interaktywny plan wydarzeń", "Parallax", "Karuzela tekstu (na mniejszych wyświetlaczach)"],
         gitHubUrl: 'https://github.com/qqavon/eventpage#event-page',
         demoUrl: 'https://qqavon.github.io/eventpage'
     },
@@ -12,7 +12,7 @@ const projectsArr = [
         name: "quizzes",
         title: "Quizzes",
         stack: ['vue', 'nodejs', 'mongodb'],
-        description: '<p> Użytkownik po rejestracji może tworzyć pytania które będą odpowiadane przez zalogowanych użytkowników. </p>',
+        description: 'Użytkownik po rejestracji może tworzyć pytania które będą odpowiadane przez zalogowanych użytkowników.',
         features: ["Rejestracja i logowanie", "Dodawanie i usuwanie quizów", "Wyszukiwarka quizów", "Paginacja"],
         gitHubUrl: 'https://github.com/qqavon/quizzes#quizzes',
         demoUrl: 'https://qqavon.github.io/quizzes'
@@ -21,7 +21,7 @@ const projectsArr = [
         name: "newsletter",
         title: "Newsletter",
         stack: ['html5', 'css3', 'js'],
-        description: '<p> Formularz zawierający prostą walidację i animacje wykonane w canvasie. Kuleczki przemieszczają się szybciej wzdłóż osi Y podczas podawania e-malia, jeżeli jest błędny, będą się trząść. </p>',
+        description: 'Formularz zawierający prostą walidację i animacje wykonane w canvasie. Kuleczki przemieszczają się szybciej wzdłóż osi Y podczas podawania e-malia, jeżeli jest błędny, będą się trząść.',
         features: ["Animacje zrobione w canvas API"],
         gitHubUrl: 'https://github.com/qqavon/newsletter#newsletter',
         demoUrl: 'https://qqavon.github.io/newsletter/'
@@ -30,8 +30,8 @@ const projectsArr = [
         name: "strona firmy",
         title: "Strona firmy",
         stack: ['vue'],
-        description: '<p> Strona zaprogramowana w celu praktycznego ćwiczenia Vue. Projekt został zaprojektowany w AdobeXd, następnie wykonany. </p>',
-        features: ["Responsywna", "Multi page", "Karuzela zdjeć", "Mapa", "Lazy loading komponentów"],
+        description: 'Strona zaprogramowana w celu praktycznego ćwiczenia Vue. Projekt został zaprojektowany w AdobeXd, następnie wykonany.',
+        features: ["Multi page", "Karuzela zdjeć", "Mapa", "Lazy loading komponentów"],
         gitHubUrl: 'https://github.com/qqavon/stronaFirmy#strona-firmy',
         demoUrl: 'https://qqavon.github.io/stronaFirmy/'
     },
@@ -40,7 +40,7 @@ const projectsArr = [
         title: "Portfolio",
         stack: ['html5', 'css3', 'js'],
         description: 'Portfolio które właśnie przeglądasz.',
-        features: ["Responsywna", "Animacje zrobione w canvas API"],
+        features: ["Animacje zrobione w canvas API"],
         gitHubUrl: 'https://github.com/qqavon/My-portfolio#portfolio',
         demoUrl: 'https://qqavon.github.io/My-portfolio/'
     },
@@ -49,10 +49,20 @@ const projectsArr = [
         title: "Albumy",
         stack: ['reactjs', 'sass'],
         description: 'Aplikacja pobierająca albumy ze zdjęciami z API jsonplaceholder.',
-        features: ["Pobieranie i wyświetlanie albumów.", "Podczas scrollowania pobierane są następne albumy.", "Tworzenie własnego motywu.", "Dodawanie albumu do ulubionych."],
+        features: ["Wyświetlanie albumów pobrane z API", "Podczas scrollowania pobierane są następne albumy", "Tworzenie własnego motywu", "Dodawanie albumu do ulubionych"],
         gitHubUrl: 'https://github.com/qqavon/albums#albums',
         demoUrl: 'https://qqavon.github.io/albums/'
     },
+    {
+        name: "images",
+        title: "Images",
+        stack: ['reactjs', 'sass'],
+        description: 'Aplikacja wyświetlająca zdjęcia z pixabay API.',
+        features: ["Wyświetlanie zdjęć pobrane z API", "Paginacja", "Filtrowanie", "Dodawanie zdjęć do ulubionych"],
+        gitHubUrl: 'https://github.com/qqavon/Images',
+        demoUrl: 'https://qqavon.github.io/Images/'
+    }
+
 ]
 
 const projectsElement = document.querySelectorAll('.projects__list__item')

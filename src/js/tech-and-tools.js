@@ -26,7 +26,7 @@ const techAndToolsData = [
     {
         name: "mongodb",
         fullName: "MongoDB",
-        description: "Wykorzystywałem do projektów REST API z użyciem frameworka mongoose do NodeJs.",
+        description: "Wykorzystywałem do projektów z REST API z użyciem frameworka mongoose do NodeJs.",
         logo: "mongodb"
     },
     {

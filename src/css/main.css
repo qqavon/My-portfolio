@@ -90,6 +90,8 @@ img {
     background-color: transparent;
     border-radius: 100%;
     border: solid #E3E3E3 1px;
+
+    cursor: pointer;
 }
 .button-circle--link {
     display: grid;

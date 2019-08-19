@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Projects = () => {
     return (
         <section id="projects">
-            Projects
+            <h1> Projekty </h1>
             <Link to="/" > Back </Link>
         </section>
     )

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Contact = () => {
     return (
         <section id="contact">
-            Contact
+            <h1> Kontakt </h1>
             <Link to="/" > Back </Link>
         </section>
     )

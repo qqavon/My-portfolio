@@ -16,7 +16,21 @@ main {
   overflow: hidden;
 }
 
+
+h1 {
+  font-size: 40px;
+}
 section {
+  position: relative;
+  display: grid;
+  align-content: start;
   min-width: 100vw;
   min-height: 100vh;
+  padding: 5% 10%;
+}
+
+section h1::first-letter {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0px 4px;
 }

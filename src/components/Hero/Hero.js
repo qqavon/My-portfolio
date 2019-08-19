@@ -51,19 +51,19 @@ const Hero = () => {
                         </div>
 
                         <div className="menu__list__item">
-                            <HashLink to="/sections#projects" scroll={ navScroll }>
+                            <HashLink to="/sections#skills" scroll={ navScroll }>
                                 <div className="menu__list__item__body r-45-m">
-                                    <span> Projekty </span>
-                                    <span> 3. </span>
+                                    <span> Umiejętności </span>
+                                    <span> 2. </span>
                                 </div>
                             </HashLink>
                         </div>
 
                         <div className="menu__list__item">
-                            <HashLink to="/sections#skills" scroll={ navScroll }>
+                            <HashLink to="/sections#projects" scroll={ navScroll }>
                                 <div className="menu__list__item__body r-45-m">
-                                    <span> Umiejętności </span>
-                                    <span> 2. </span>
+                                    <span> Projekty </span>
+                                    <span> 3. </span>
                                 </div>
                             </HashLink>
                         </div>

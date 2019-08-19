@@ -12,25 +12,43 @@ body {
 }
 
 main {
+  display: grid;
+  width: 100%;
   position: relative;
   overflow: hidden;
+  justify-content: center;
+  justify-items: center;
 }
 
-
-h1 {
-  font-size: 40px;
-}
 section {
+  justify-self: center;
   position: relative;
   display: grid;
   align-content: start;
-  min-width: 100vw;
+  max-width: 1336px;
   min-height: 100vh;
-  padding: 5% 10%;
+  padding: 10% 18px;
 }
 
-section h1::first-letter {
+.section-name::first-letter {
   background-color: #000000;
   color: #ffffff;
   padding: 0px 4px;
+}
+
+.section-name {
+  justify-self: start;
+  position: relative;
+  font-size: 40px;
+  padding: 18px 0;
+}
+
+.section-name__background-text {
+  position: absolute;
+  left: 30px;
+  transform: translateY(-40%);
+  font-size: 180px;
+  font-weight: 600;
+  color: #eeeeee;
+  z-index: -1;
 }

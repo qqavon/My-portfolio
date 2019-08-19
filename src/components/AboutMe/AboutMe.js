@@ -4,7 +4,10 @@ import './aboutMe.css'
 const AboutMe = () => {
     return (
         <section id="about-me" className="about-me">
-            <h1> O mnie </h1>
+            <h1 className="section-name">
+                O mnie
+                <span className="section-name__background-text"> 1. </span>
+            </h1>
             <div className="description">
                 <p>
                     Pierwsze kroki postawiłem w programowaniu 2 lata temu w języku Java (SE) tworząc proste aplikacje okienkowe. Rok później zainteresował mnie front-end . Możliwości jakie oferuje i jego dynamiczny rozwój spowodował, że stał się moim głównym obiektem zainteresowań.

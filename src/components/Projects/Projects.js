@@ -1,14 +1,13 @@
 import React from 'react'
-import './aboutMe.css'
 import { Link } from 'react-router-dom'
 
-const AboutMe = () => {
+const Projects = () => {
     return (
-        <section id="about-me">
-            About me
+        <section id="projects">
+            Projects
             <Link to="/" > Back </Link>
         </section>
     )
 }
 
-export default AboutMe
+export default Projects

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './views/Home/Home'
 import Sections from './views/Sections/Sections'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
+import './addons/css/fadeTransition.css'
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
           <Route render={({ location }) => (
               <SwitchTransition mode="out-in">
                 <CSSTransition
-                  key={ location.pathname }
-                  timeout={ 600 }
-                  classNames='fade'
+                    key={ location.pathname }
+                    timeout={500}
+                    classNames='fade'
                   >
                   <Switch location={ location }>
                       <Route exact path="/" component={ Home } />

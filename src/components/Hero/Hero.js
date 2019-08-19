@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './hero.css'
-import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 const Hero = () => {    
     const appearAnimation = () => {
@@ -18,6 +18,9 @@ const Hero = () => {
                 }, (index * 175) )
             })
         }, 600)
+    }
+    const navScroll = el => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
     
     useEffect(() => {
@@ -39,39 +42,39 @@ const Hero = () => {
                 <div className="menu r-45">
                     <div className="menu__list">
                         <div className="menu__list__item">
-                            <Link to="/sections#aboutMe" >
+                            <HashLink to="/sections#aboutMe" scroll={ navScroll }>
                                 <div className="menu__list__item__body r-45-m">
                                     <span> O mnie </span>
                                     <span> 1. </span>
                                 </div>
-                            </Link>
+                            </HashLink>
                         </div>
 
                         <div className="menu__list__item">
-                            <Link to="/sections#projects" >
+                            <HashLink to="/sections#projects" scroll={ navScroll }>
                                 <div className="menu__list__item__body r-45-m">
                                     <span> Projekty </span>
                                     <span> 3. </span>
                                 </div>
-                            </Link>
+                            </HashLink>
                         </div>
 
                         <div className="menu__list__item">
-                            <Link to="/sections#skills" >
+                            <HashLink to="/sections#skills" scroll={ navScroll }>
                                 <div className="menu__list__item__body r-45-m">
                                     <span> Umiejętności </span>
                                     <span> 2. </span>
                                 </div>
-                            </Link>
+                            </HashLink>
                         </div>
 
                         <div className="menu__list__item">
-                            <Link to="/sections#contact" >
+                            <HashLink to="/sections#contact" scroll={ navScroll }>
                                 <div className="menu__list__item__body r-45-m">
                                     <span> Kontakt </span>
                                     <span> 4. </span>
                                 </div>
-                            </Link>
+                            </HashLink>
                         </div>
                     </div>
                 </div>

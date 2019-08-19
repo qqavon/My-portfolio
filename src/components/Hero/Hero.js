@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './hero.css'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {    
     const appearAnimation = () => {
@@ -38,28 +39,39 @@ const Hero = () => {
                 <div className="menu r-45">
                     <div className="menu__list">
                         <div className="menu__list__item">
-                            <div className="menu__list__item__body r-45-m">
-                                <span> O mnie </span>
-                                <span> 1. </span>
-                            </div>
+                            <Link to="/sections#aboutMe" >
+                                <div className="menu__list__item__body r-45-m">
+                                    <span> O mnie </span>
+                                    <span> 1. </span>
+                                </div>
+                            </Link>
                         </div>
+
                         <div className="menu__list__item">
-                            <div className="menu__list__item__body r-45-m">
-                                <span> Projekty </span>
-                                <span> 3. </span>
-                            </div>
+                            <Link to="/sections#projects" >
+                                <div className="menu__list__item__body r-45-m">
+                                    <span> Projekty </span>
+                                    <span> 3. </span>
+                                </div>
+                            </Link>
                         </div>
+
                         <div className="menu__list__item">
-                            <div className="menu__list__item__body r-45-m">
-                                <span> Umiejętności </span>
-                                <span> 2. </span>
-                            </div>
+                            <Link to="/sections#skills" >
+                                <div className="menu__list__item__body r-45-m">
+                                    <span> Umiejętności </span>
+                                    <span> 2. </span>
+                                </div>
+                            </Link>
                         </div>
+
                         <div className="menu__list__item">
-                            <div className="menu__list__item__body r-45-m">
-                                <span> Kontakt </span>
-                                <span> 4. </span>
-                            </div>
+                            <Link to="/sections#contact" >
+                                <div className="menu__list__item__body r-45-m">
+                                    <span> Kontakt </span>
+                                    <span> 4. </span>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

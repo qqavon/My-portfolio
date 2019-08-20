@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './skills.css'
 import '../../addons/css/scaleTransition.css'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
@@ -63,7 +62,7 @@ const Skills = () => {
                             timeout={ 200 }
                             classNames="scale"
                         >
-                            <img src={`src/img/${iconSrc}`} />
+                            <img src={`src/img/icons/${iconSrc}`} alt="icon" />
                         </CSSTransition>
                     </TransitionGroup>
                     : null }

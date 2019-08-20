@@ -19,6 +19,7 @@ const Hero = () => {
             })
         }, 600)
     }
+    
     const navScroll = el => {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
@@ -42,7 +43,7 @@ const Hero = () => {
                 <div className="menu r-45">
                     <div className="menu__list">
                         <div className="menu__list__item">
-                            <HashLink to="/sections#aboutMe" scroll={ navScroll }>
+                            <HashLink to="/sections#about-me" scroll={ el => el}>
                                 <div className="menu__list__item__body r-45-m">
                                     <span> O mnie </span>
                                     <span> 1. </span>

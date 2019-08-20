@@ -11,6 +11,11 @@ body {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+::selection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 main {
   display: grid;
   width: 100%;
@@ -25,9 +30,10 @@ section {
   position: relative;
   display: grid;
   align-content: start;
-  max-width: 1336px;
+  max-width: 1050px;
+  width: 100%;
   min-height: 100vh;
-  padding: 10% 18px;
+  padding: 10% 15px;
 }
 
 .section-name::first-letter {
@@ -51,4 +57,19 @@ section {
   font-weight: 600;
   color: #eeeeee;
   z-index: -1;
+}
+
+.button {
+  background-color: transparent;
+  padding: 5px 10px;
+  min-width: 70px;
+  cursor: pointer;
+}
+.button--white {
+  color: #ffffff;
+  border: solid #ffffff 1px;
+}
+.button--black {
+  color: #000000;
+  border: solid #000000 1px;
 }

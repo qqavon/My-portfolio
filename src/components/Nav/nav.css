@@ -1,0 +1,9 @@
+nav {
+    position: fixed;
+    z-index: 15;
+    color: #A0A0A0;
+}
+
+.activeNav {
+    color: #141414;
+}

@@ -75,6 +75,7 @@ a:visited {
 .me__icon {
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
 
 .me a {

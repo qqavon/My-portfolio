@@ -4,13 +4,13 @@
 }
 
 .scale-enter-active {
-    opacity: .35;
+    opacity: .4;
     transform: scale(1);
     transition: opacity .1s ease-in, transform .2s ease-in-out;
 }
 
 .scale-exit {
-    opacity: .35;
+    opacity: .4;
     transform: scale(1);
 }
 

@@ -6,6 +6,7 @@ const Hero = () => {
     const appearAnimation = () => {
         const elements = document.querySelectorAll('.curtain, .hero')
         const menuListItems = document.querySelectorAll('.menu__list__item')
+        const names = document.querySelectorAll('.me__as, .me__name, .me__icon')
 
         elements.forEach(element => {
             element.classList.add('appear')
@@ -17,7 +18,12 @@ const Hero = () => {
                     item.classList.add('appear')
                 }, (index * 175) )
             })
-        }, 600)
+            names.forEach((name, index) => {
+                setTimeout(() => {
+                    name.classList.add('appear')
+                }, (index * 100))
+            })
+        }, 500)
     }
     
     const navScroll = el => {

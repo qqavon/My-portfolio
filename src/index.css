@@ -63,6 +63,7 @@ section {
   background-color: transparent;
   padding: 5px 10px;
   min-width: 70px;
+  outline: none;
   cursor: pointer;
 }
 .button--white {

@@ -4,7 +4,9 @@ import './projectItem.css'
 const ProjectItem = ({name, stack, imgSrc, githubUrl, demoUrl, date, description}) => {
     return (
         <div className="projects__list__item">
-            <img src={`src/img/projects/${ imgSrc }`} />
+            { imgSrc ?
+                <img src={`src/img/projects/${ imgSrc }`} /> : null
+            }
             <div className="project-body">
                 <span className="project-body__name"> { name } </span>
 

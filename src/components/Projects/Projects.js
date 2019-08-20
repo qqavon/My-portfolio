@@ -45,6 +45,14 @@ const Projects = () => {
             githubUrl: 'https://github.com/qqavon/quizzes',
             demoUrl: 'https://qqavon.github.io/quizzes/#/',
             date: '22.04.2019'
+        },
+        {
+            name: '',
+            imgSrc: '',
+            description: 'Więcej projektów znajduje się na githubie.',
+            stack: [],
+            githubUrl: 'https://github.com/qqavon?tab=repositories',
+            date: ''
         }
     ]
 

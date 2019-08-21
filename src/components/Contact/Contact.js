@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Contact = () => {
     return (
@@ -8,7 +7,9 @@ const Contact = () => {
                 Kontakt
                 <span className="section-name__background-text"> 4. </span>
             </h1>
-            <Link to="/" > Back </Link>
+            <p>
+                <b> E-mail: </b> <a href="mailto:qqavon@gmail.com">qqavon@gmail.com</a>
+            </p>
         </section>
     )
 }

@@ -7,6 +7,13 @@
     box-shadow: 0px 4px 12px -2px #868686;
     overflow: hidden;
     cursor: default;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+}
+.projects__list__item[class~=active] {
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .projects__list__item img {
@@ -15,9 +22,6 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
-}
-.projects__list__item:hover .project-body {
-    background-color: rgba(0, 0, 0, .7);
 }
 
 .project-body {
@@ -37,6 +41,9 @@
     transition: transform .2s ease-in-out;
     padding: 5px 15px 15px 15px;
     transition: background-color .2s ease-in-out;
+}
+.projects__list__item:hover .project-body {
+    background-color: rgba(0, 0, 0, .7);
 }
 .project-body__name {
     height: 30px;

@@ -5,7 +5,7 @@ const ProjectItem = ({name, stack, imgSrc, githubUrl, demoUrl, date, description
     return (
         <div className="projects__list__item">
             { imgSrc ?
-                <img src={`src/img/projects/${ imgSrc }`} /> : null
+                <img src={`src/img/projects/${ imgSrc }`} alt={ `${name} miniature` } /> : null
             }
             <div className="project-body">
                 <span className="project-body__name"> { name } </span>

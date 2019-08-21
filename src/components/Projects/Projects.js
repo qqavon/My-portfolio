@@ -20,18 +20,18 @@ const Projects = () => {
             date: 'in progress'
         },
         {
-            name: 'Landing page',
+            name: 'Strona firmy',
             imgSrc: 'company.JPG',
-            description: 'Landing page o nazwie "Strona firmy"',
+            description: 'Landing page wykonany w celu praktycznego ćwiczenia.',
             stack: ['Vue'],
             githubUrl: 'https://github.com/qqavon/Images',
             demoUrl: 'https://qqavon.github.io/Images/',
             date: '3.06.2019'
         },
         {
-            name: 'Landing page',
+            name: 'Event page',
             imgSrc: 'eventPage.JPG',
-            description: 'Landing page o nazwie "Event page"',
+            description: 'Landing page wykonany w celu praktycznego ćwiczenia.',
             stack: ['Vue'],
             githubUrl: 'https://github.com/qqavon/Images',
             demoUrl: 'https://qqavon.github.io/Images/',
@@ -40,7 +40,7 @@ const Projects = () => {
         {
             name: 'Quizzes',
             imgSrc: 'quizzes.JPG',
-            description: 'Strona umożliwia tworzenie quizów które będą rozwiązywane przez zalogowanych użytkowników.',
+            description: 'Tworzenie i rozwiązywanie quizów.',
             stack: ['Vue', 'NodeJs', 'MongoDB'],
             githubUrl: 'https://github.com/qqavon/quizzes',
             demoUrl: 'https://qqavon.github.io/quizzes/#/',

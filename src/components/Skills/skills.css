@@ -19,6 +19,7 @@
     width: 100px;
     height: 100px;
     opacity: .4;
+    object-fit: contain;
 }
 
 .skills__container {

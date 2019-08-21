@@ -13,13 +13,15 @@ const Skills = () => {
         { name: 'NodeJs', icon: 'nodejs.svg' },
         { name: 'MongoDB', icon: 'mongodb.svg' },
         { name: 'Vue', icon: 'vuejs.svg' },
-        { name: 'Sass', icon: 'sass.svg' },
+        { name: 'Sass/Scss', icon: 'sass.svg' },
         { name: 'React', icon: 'reactjs.svg' },
+        { name: 'Mongoose', icon: 'mongoose.png' },
+        { name: 'ExpressJs', icon: 'expressjs.svg' },
     ]
     const tools = [
         { name: 'Visual Studio Code', icon: 'vscode.png' },
-        { name: 'Git', icon: 'git.png' },
-        { name: 'Adobe Experience Design', icon: 'adobexd.png' }
+        { name: 'Adobe Experience Design', icon: 'adobexd.png' },
+        { name: 'Git', icon: 'git.png' }
     ]
 
     const onHover = item => {

@@ -16,6 +16,10 @@ const Sections = () => {
         const contactElements = document.querySelectorAll('#contact p')
         let isContactAppear = false
 
+        const skillsSection = document.querySelector('#skills')
+        const skillContainers = document.querySelectorAll('.skills__container')
+        let isSkillsAppear = false
+
         const showProjects = () => {
             isProjectsAppear = true
             projectsList.forEach((project, index) => {
@@ -34,6 +38,15 @@ const Sections = () => {
             })
         }
 
+        const showSkillsContainers = () => {
+            isSkillsAppear = true
+            skillContainers.forEach((container, index) => {
+                setTimeout(() => {
+                    container.classList.add('active')
+                }, (index * 125))
+            })
+        }
+
         window.onscroll = () => {
             const screenHeight = window.innerHeight
             if((window.pageYOffset + screenHeight/3) > projectsSection.offsetTop && !isProjectsAppear) {
@@ -41,6 +54,9 @@ const Sections = () => {
             }
             if((window.pageYOffset + screenHeight/3) > contactSection.offsetTop && !isContactAppear) {
                 showContactElements()
+            }
+            if((window.pageYOffset + screenHeight/3) > skillsSection.offsetTop && !isSkillsAppear) {
+                showSkillsContainers()
             }
         }
     }, [])

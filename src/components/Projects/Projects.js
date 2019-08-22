@@ -9,7 +9,7 @@ const Projects = () => {
             imgSrc: 'portfolio.JPG',
             description: 'Portfolio które właśnie przeglądasz.',
             stack: ['React'], githubUrl: 'https://github.com/qqavon/My-portfolio',
-            date: 'in progress'
+            date: '22.08.2019'
         },
         {
             name: 'Images',
@@ -24,8 +24,8 @@ const Projects = () => {
             imgSrc: 'company.JPG',
             description: 'Landing page wykonany w celu praktycznego ćwiczenia.',
             stack: ['Vue'],
-            githubUrl: 'https://github.com/qqavon/Images',
-            demoUrl: 'https://qqavon.github.io/Images/',
+            githubUrl: 'https://github.com/qqavon/stronaFirmy',
+            demoUrl: 'https://qqavon.github.io/stronaFirmy',
             date: '3.06.2019'
         },
         {
@@ -33,8 +33,8 @@ const Projects = () => {
             imgSrc: 'eventPage.JPG',
             description: 'Landing page wykonany w celu praktycznego ćwiczenia.',
             stack: ['Vue'],
-            githubUrl: 'https://github.com/qqavon/Images',
-            demoUrl: 'https://qqavon.github.io/Images/',
+            githubUrl: 'https://github.com/qqavon/eventpage',
+            demoUrl: 'https://qqavon.github.io/eventpage',
             date: '22.05.2019'
         },
         {

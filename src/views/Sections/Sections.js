@@ -20,31 +20,33 @@ const Sections = () => {
         const skillContainers = document.querySelectorAll('.skills__container')
         let isSkillsAppear = false
 
-        const showProjects = () => {
-            isProjectsAppear = true
-            projectsList.forEach((project, index) => {
-                setTimeout(() => {
-                    project.classList.add('active')
-                }, (index * 100))
-            })
-        }
+        const aboutMeTexts = document.querySelectorAll('.description p')
 
-        const showContactElements = () => {
-            isContactAppear = true
-            contactElements.forEach((element, index) => {
+        const addClassesWithOffset = (elements = [], offset, boolean = null) => {
+            if( boolean !== null ) {
+                boolean = true
+            }
+            elements.forEach((element, index) => {
                 setTimeout(() => {
                     element.classList.add('active')
-                }, (index * 125))
+                }, ( index * offset ))
             })
         }
 
+        const showProjects = () => {
+            addClassesWithOffset(projectsList, 100, isProjectsAppear)
+        }
+        
+        const showContactElements = () => {
+            addClassesWithOffset(contactElements, 125, isContactAppear)
+        }
+        
         const showSkillsContainers = () => {
-            isSkillsAppear = true
-            skillContainers.forEach((container, index) => {
-                setTimeout(() => {
-                    container.classList.add('active')
-                }, (index * 125))
-            })
+            addClassesWithOffset(skillContainers, 125, isSkillsAppear)
+        }
+        
+        const showDescriptionTexts = () => {
+            addClassesWithOffset(aboutMeTexts, 100)
         }
 
         window.onscroll = () => {
@@ -59,6 +61,9 @@ const Sections = () => {
                 showSkillsContainers()
             }
         }
+        setTimeout(() => {
+            showDescriptionTexts()
+        }, 300)
     }, [])
 
     return (

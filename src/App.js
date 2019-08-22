@@ -7,7 +7,7 @@ import './addons/css/fadeTransition.css'
 
 function App() {
   return (
-    <Router basename="/My-portfolio">
+    <Router>
       <div className="App">
         <main>
           <Route render={({ location }) => (

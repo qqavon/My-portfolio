@@ -1,3 +1,14 @@
 #contact a {
     cursor: pointer;
 }
+
+#contact p {
+    margin: 6px 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .3s ease-in-out, transform .5s ease-in-out;
+}
+#contact p[class~=active] {
+    opacity: 1;
+    transform: translateY(0px);
+}

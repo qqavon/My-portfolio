@@ -22,7 +22,7 @@ nav[class~=active] {
 }
 .nav__body {
     justify-self: end;
-    display: grid;
+    display: none;
     align-content: start;
     padding: 15px;
     grid-gap: 20px;
@@ -36,19 +36,18 @@ nav[class~=active] {
     overflow: hidden;
     transform: translateX(105%);
     opacity: 0;
-    transition: transform .6s ease-out, opacity .3s ease-in-out;
 }
 .nav__body[class~=active] {
-    transition: transform .3s ease-out, opacity .6s ease-in-out;
+    display: grid;
     opacity: 1;
     transform: translateX(0%)
 }
 .nav__body a {
     opacity: 0;
     cursor: pointer;
-    transition: opacity .4s ease-in-out;
 }
 .nav__body a[class~=active] {
+    transition: opacity .4s ease-in-out;
     opacity: 1;
 }
 

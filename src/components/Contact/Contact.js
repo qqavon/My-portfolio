@@ -11,6 +11,9 @@ const Contact = () => {
             <p>
                 <b> E-mail: </b> <a href="mailto:qqavon@gmail.com">qqavon@gmail.com</a>
             </p>
+            <p>
+                <b> LinkedIn: </b> <a href="https://www.linkedin.com/in/jakub-nowak-9871a018b/"> jakub-nowak-9871a018b </a>
+            </p>
         </section>
     )
 }

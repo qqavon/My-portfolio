@@ -12,7 +12,7 @@ const Nav = () => {
         links.forEach((link, index) => {
             setTimeout(() => {
                 link.classList.toggle('active')
-            }, (index * 120))
+            }, (index * 40))
         })
     }
     const navScroll = el => {
